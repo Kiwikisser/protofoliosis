@@ -1,0 +1,12 @@
+.welcome {
+  height: 100%;
+  width: 100%;
+}
+.welcome__background {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
+/*# sourceMappingURL=_welcome.css.map */
