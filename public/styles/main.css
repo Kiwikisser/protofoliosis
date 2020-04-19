@@ -15,6 +15,7 @@ body {
 }
 
 .welcome {
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -23,6 +24,18 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: 50% 70%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.welcome__reception {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=main.css.map */
