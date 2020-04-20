@@ -10,34 +10,44 @@
 .navbar{
   width: 100%;
   height: 10vh;
+  margin-top: $default_y_gap;
 
-  &-work.roll{
+  &-work.roll,&-profile.roll{
     display: inline-block;
   }
 
-  &-profile.roll{
-    display: inline-block;
+  &-work:hover,&-profile:hover{
+    box-shadow: inset 0px -5px 0px 0px #292929;
   }
+
+  // &-profile.roll{
+  //   display: inline-block;
+  // }
 
   &__list{
     width: 0%;
     transition: 0.4s;
-    background-color: blue;
+    background-color: white;
+    margin-left: 50px;
+    z-index: 0;
+    background: linear-gradient(225deg, transparent 22px, #fff 0) top right, linear-gradient(315deg, transparent 22px, #fff 0) bottom right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
     @extend .clearfix;
 
     &__item{
       color: black;
       display: none;
       float: left;
-      margin-left: $default_x_gap;
+      margin-left: $default_x_gap*3;
       margin-top: $default_y_gap;
       font-size: 150%;
       padding-bottom: 10px;
       cursor: pointer;
+      min-width: 70px;
+      text-align: center;
 
       &:hover{
-        border-bottom: 5px solid blue;
-
       }
     }
 
@@ -49,6 +59,6 @@
   }
 
   &__list.roll{
-    width: 75%;
+    width: 55%;
   }
 }

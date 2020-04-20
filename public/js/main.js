@@ -43,6 +43,9 @@ window.onload = function(){
     document.addEventListener("mousemove", detectMouse);
 
   }else if (window.location.pathname === '/public/work.html'){
+    let firstBar = document.getElementById("js--firstBar");
+    let secondBar = document.getElementById("js--secondBar");
+    let thirdBar = document.getElementById("js--thirdBar");
     const barContainer = document.getElementById("js--barContainer");
     const barContainerBg = document.getElementById("js--barContainerBg");
     const navbarList = document.getElementById('js--navbar-list');
@@ -52,29 +55,31 @@ window.onload = function(){
     let menuBool = false;
 
     barContainer.onmousedown = function (){
-      // firstBar.classList.toggle("change");
-      // secondBar.classList.toggle("change");
-      // thirdBar.classList.toggle("change");
+      firstBar.classList.toggle("change");
+      secondBar.classList.toggle("change");
+      thirdBar.classList.toggle("change");
       let timeoutTime;
+
       if (menuBool === false) {
         timeoutTime = 100;
         menuBool = !menuBool;
         console.log(menuBool);
       } else {
-        timeoutTime = 0;
+        timeoutTime = 40;
         menuBool = !menuBool;
         console.log(menuBool);
       }
+
       barContainerBg.classList.toggle("change");
+
       navbarList.classList.toggle("roll");
+
       setTimeout(function(){
         navbarWork.classList.toggle("roll");
         setTimeout(function(){
           navbarProfile.classList.toggle("roll");
         }, timeoutTime);
       }, timeoutTime);
-
-
     }
   }
 
