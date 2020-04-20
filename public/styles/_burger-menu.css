@@ -1,0 +1,33 @@
+.bar-container {
+  margin-top: 15px;
+  margin-left: 25px;
+  display: block;
+  width: 35px;
+  padding: 10px;
+}
+.bar-container:hover {
+  border: none;
+}
+.bar-container__background {
+  background-color: crimson;
+  height: 60px;
+  width: 60px;
+  transition: 0.4s;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 23px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.bar-container__background.change {
+  transform: rotate(135deg);
+}
+.bar-container__bar, .bar-container__bar--3, .bar-container__bar--2, .bar-container__bar--1 {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/*# sourceMappingURL=_burger-menu.css.map */

@@ -5,13 +5,21 @@ window.onload = function(){
     const welcomePane = document.getElementById('js--welcome-pane');
     const welcomeReception = document.getElementById('js--welcome-reception');
     const welcomeBackground = document.getElementById('js--welcome-background');
+    let followUpPage = "work.html"
+
     console.log(welcomeBackground.style.objectPosition);
 
     testFunction = (e) => {
       console.log(e);
     }
 
-    function detectMouse(e) {
+    gottaWorkFromHome = () => {
+      //cute fx
+
+      window.location.href = followUpPage;
+    }
+
+    detectMouse = (e) => {
       let offsetPaneX = 910;
       let offsetPaneY = 460;
       let offsetReceptionX = 870;
@@ -30,10 +38,44 @@ window.onload = function(){
       welcomeBackground.style.top = (-e.y/220) + "%";
     }
 
-    welcomePane.addEventListener("click", testFunction);
+    welcomePane.addEventListener("click", gottaWorkFromHome);
 
     document.addEventListener("mousemove", detectMouse);
 
+  }else if (window.location.pathname === '/public/work.html'){
+    const barContainer = document.getElementById("js--barContainer");
+    const barContainerBg = document.getElementById("js--barContainerBg");
+    const navbarList = document.getElementById('js--navbar-list');
+    const navbarWork = document.getElementById('js--navbar-work');
+    const navbarProfile = document.getElementById('js--navbar-profile');
+
+    let menuBool = false;
+
+    barContainer.onmousedown = function (){
+      // firstBar.classList.toggle("change");
+      // secondBar.classList.toggle("change");
+      // thirdBar.classList.toggle("change");
+      let timeoutTime;
+      if (menuBool === false) {
+        timeoutTime = 100;
+        menuBool = !menuBool;
+        console.log(menuBool);
+      } else {
+        timeoutTime = 0;
+        menuBool = !menuBool;
+        console.log(menuBool);
+      }
+      barContainerBg.classList.toggle("change");
+      navbarList.classList.toggle("roll");
+      setTimeout(function(){
+        navbarWork.classList.toggle("roll");
+        setTimeout(function(){
+          navbarProfile.classList.toggle("roll");
+        }, timeoutTime);
+      }, timeoutTime);
+
+
+    }
   }
 
 }

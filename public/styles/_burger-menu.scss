@@ -1,0 +1,64 @@
+@import 'variables';
+
+.bar-container{
+  margin-top: 15px;
+  margin-left: 25px;
+  display: block;
+  width: 35px;
+  padding: 10px;
+
+  &:hover{
+    border: none;
+  }
+
+  &__background{
+    background-color: crimson;
+    height: 60px;
+    width: 60px;
+    transition: 0.4s;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 23px;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  &__background.change{
+    transform: rotate(135deg);
+  }
+
+  &__bar{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
+    transition: 0.4s;
+
+    &--1{
+      @extend .bar-container__bar;
+    }
+
+    // &--1.change{
+    //   background-color: red;
+    //   transform: rotate(-45deg) translate(-9px,6px);
+    // }
+
+    &--2{
+      @extend .bar-container__bar;
+    }
+
+    // &--2.change{
+    //   opacity: 0;
+    // }
+
+    &--3{
+      @extend .bar-container__bar;
+    }
+
+    // &--3.change{
+    //   background-color: red;
+    //   transform: rotate(45deg) translate(-8px,-8px);
+    // }
+  }
+
+}

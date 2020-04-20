@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Exo", sans-serif;
 }
 
 html {
@@ -85,6 +85,79 @@ body {
 }
 .welcome__reception p {
   margin-bottom: 10px;
+}
+
+.clearfix:after, .navbar__list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+}
+.navbar-work.roll {
+  display: inline-block;
+}
+.navbar-profile.roll {
+  display: inline-block;
+}
+.navbar__list {
+  width: 0%;
+  transition: 0.4s;
+  background-color: blue;
+}
+.navbar__list__item, .navbar__list__item--right {
+  color: black;
+  display: none;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 150%;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.navbar__list__item:hover, .navbar__list__item--right:hover {
+  border-bottom: 5px solid blue;
+}
+.navbar__list__item--right {
+  float: right;
+}
+.navbar__list.roll {
+  width: 75%;
+}
+
+.bar-container {
+  margin-top: 15px;
+  margin-left: 25px;
+  display: block;
+  width: 35px;
+  padding: 10px;
+}
+.bar-container:hover {
+  border: none;
+}
+.bar-container__background {
+  background-color: crimson;
+  height: 60px;
+  width: 60px;
+  transition: 0.4s;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 23px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.bar-container__background.change {
+  transform: rotate(135deg);
+}
+.bar-container__bar, .bar-container__bar--3, .bar-container__bar--2, .bar-container__bar--1 {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: white;
+  transition: 0.4s;
 }
 
 /*# sourceMappingURL=main.css.map */
