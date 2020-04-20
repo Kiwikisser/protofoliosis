@@ -7,7 +7,7 @@
 .navbar {
   width: 100%;
   height: 10vh;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .navbar-work.roll, .navbar-profile.roll {
   display: inline-block;
@@ -19,10 +19,10 @@
   width: 0%;
   transition: 0.4s;
   background-color: white;
-  margin-left: 50px;
+  margin-left: 100px;
   z-index: 0;
   background: linear-gradient(225deg, transparent 22px, #fff 0) top right, linear-gradient(315deg, transparent 22px, #fff 0) bottom right;
-  background-size: 100% 50%;
+  background-size: 100% 51%;
   background-repeat: no-repeat;
 }
 .navbar__list__item, .navbar__list__item--right {
@@ -30,18 +30,19 @@
   display: none;
   float: left;
   margin-left: 90px;
-  margin-top: 20px;
+  margin-top: 8px;
   font-size: 150%;
   padding-bottom: 10px;
   cursor: pointer;
   min-width: 70px;
   text-align: center;
+  line-height: 2.7rem;
 }
 .navbar__list__item--right {
   float: right;
 }
 .navbar__list.roll {
-  width: 55%;
+  width: 25%;
 }
 
 /*# sourceMappingURL=_nav-menu.css.map */
