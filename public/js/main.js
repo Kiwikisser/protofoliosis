@@ -1,7 +1,7 @@
 window.onload = function(){
   // console.log(window.location.pathname);
 
-  if(window.location.pathname === '/public/'){
+  if($("body").data("page") === "index"){
     const welcomePane = document.getElementById('js--welcome-pane');
     const welcomeReception = document.getElementById('js--welcome-reception');
     const welcomeBackground = document.getElementById('js--welcome-background');
@@ -42,7 +42,7 @@ window.onload = function(){
 
     document.addEventListener("mousemove", detectMouse);
 
-  }else if (window.location.pathname === '/public/work.html'){
+  }else if ($("body").data("page") === "work"){
     const firstBar = document.getElementById("js--firstBar");
     const secondBar = document.getElementById("js--secondBar");
     const thirdBar = document.getElementById("js--thirdBar");
