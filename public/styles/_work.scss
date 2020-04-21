@@ -3,13 +3,22 @@
 .work{
 
   &-main{
+    margin-top: 200px;
+  }
 
+  &__header{
+
+    &__title{
+      font-size: 9rem;
+      margin: 0 8%;
+      font-family: 'Orbitron', sans-serif;
+    }
   }
 
   &__pair{
     background-color: black;
     width: 75%;
-    margin: 15.4% auto 0 auto;
+    margin: 20.4% auto 0 auto;
     transform: rotate(-45deg);
     position: relative;
     z-index: 5;
@@ -26,7 +35,7 @@
       z-index: 3;
     }
 
-    &-thumb{
+    &-thumb.ipmedt2, &-thumb.iipmedt, &-thumb.ipmedt3, &-thumb.ipmedt5{
       width: 48.5%;
       height: 96%;
       // object-fit: cover;
@@ -37,11 +46,30 @@
       margin: 1%;
       transition: .4s;
 
+      &.first-item{
+        right: 0;
+      }
+
+      // &:before{
+      //   content: "";
+      //   position: absolute;
+      //   width: 150%;
+      //   height: 150%;
+      //   top: -25%;
+      //   left: -25%;
+      //   z-index: -1;
+      //   background: url(../media/homeboy.jpg) 0 0 no-repeat;
+      //   background-size: cover;
+      //   transition: .4s;
+      //   transform: rotate(45deg);
+      // }
+
       &:hover{
         transform: scale(1.05) rotate(45deg);
-        filter: blur(4px);
+        filter: blur(3px);
         z-index: 10;
         cursor: pointer;
+        outline: 15px solid #efefef;
 
         &:before{
           transform: rotate(0deg);
@@ -51,34 +79,100 @@
           left: 0;
         }
       }
-
-      &.first-item{
-        right: 0;
-      }
-
-      // &.change{
-      //   filter: blur(4px);
-      // }
-
-      &:before{
-        content: "";
-        position: absolute;
-        width: 150%;
-        height: 150%;
-        top: -25%;
-        left: -25%;
-        z-index: -1;
-        background: url(../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
-        background-size: cover;
-        transition: .4s;
-        transform: rotate(45deg);
-      }
     }
 
-    &__text{
-      width: 100px;
-      height: 50px;
-      background-color: white;
+    &-thumb.ipmedt2:before{
+      background: url(../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      z-index: -1;
+      background-size: cover;
+      transition: .4s;
+      transform: rotate(45deg);
+    }
+
+    &-thumb.iipmedt:before{
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      z-index: -1;
+      background: url(../media/workThumbnails/iipmedt_1.jpeg) 0 0 no-repeat;
+      background-size: cover;
+      transition: .4s;
+      transform: rotate(45deg);
+    }
+
+    &-thumb.ipmedt3:before{
+      background: url(../media/workThumbnails/ipmedt3.png) 0 0 no-repeat;
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      z-index: -1;
+      background-size: cover;
+      transition: .4s;
+      transform: rotate(45deg);
+    }
+
+    &-thumb.ipmedt5:before{
+      background: url(../media/workThumbnails/ipmedt5.jpeg) 0 0 no-repeat;
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      z-index: -1;
+      background-size: cover;
+      transition: .4s;
+      transform: rotate(45deg);
+    }
+
+    &__clickbait{
+      position: absolute;
+      transform: rotate(45deg);
+      top: 37%;
+      background-color: rgba(255, 255, 255, 0.75);
+      z-index: 50;
+      opacity: 0;
+      display: table;
+      transition: .4s;
+      pointer-events: none;
+      height: 25%;
+      width: 40%;
+      font-size: 2rem;
+
+      & h3{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      &.cb1,&.cb3{
+        right: 5%;
+        @extend .work__pair__clickbait;
+      }
+
+      &.cb2,&.cb4{
+        left: 5%;
+        @extend .work__pair__clickbait;
+      }
+
+      &.cb1,&.cb2,&.cb3,&.cb4{
+        &.show{
+          opacity: 1;
+          // display: block;
+        }
+      }
     }
   }
 }

@@ -24,6 +24,7 @@
 .bar-container__background.change {
   transform: rotate(135deg);
   background-color: white;
+  box-shadow: 3px -3px 7px 0px #e8e8e8;
 }
 .bar-container__bar, .bar-container__bar--1, .bar-container__bar--2, .bar-container__bar--3 {
   width: 35px;

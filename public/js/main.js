@@ -22,7 +22,7 @@ window.onload = function(){
     detectMouse = (e) => {
       let offsetPaneX = 910;
       let offsetPaneY = 460;
-      let offsetReceptionX = 870;
+      let offsetReceptionX = 875;
       let offsetReceptionY = 435;
       let paneModifier = 20;
       let receptionModifier = 12;
@@ -51,14 +51,40 @@ window.onload = function(){
     const navbarList = document.getElementById('js--navbar-list');
     const navbarWork = document.getElementById('js--navbar-work');
     const navbarProfile = document.getElementById('js--navbar-profile');
+    const workIpmedt2Clickbait = document.getElementsByClassName('cb1')[0];
+    const workIipmedtClickbait = document.getElementsByClassName('cb2')[0];
+    const workIpmedt3Clickbait = document.getElementsByClassName('cb3')[0];
+    const workIpmedt5Clickbait = document.getElementsByClassName('cb4')[0];
 
     const workThumb = document.getElementsByClassName('work__pair-thumb');
 
     let menuBool = false;
 
+    displayClickbait = (elem) => {
+      // console.log(elem.classList[1]);
+      workProjectHovered = elem.classList[1];
+      switch (workProjectHovered) {
+        case 'ipmedt2':
+          workIpmedt2Clickbait.classList.toggle("show");
+          break;
+        case 'iipmedt':
+          workIipmedtClickbait.classList.toggle("show");
+          break;
+        case 'ipmedt3':
+          workIpmedt3Clickbait.classList.toggle("show");
+          break;
+        case 'ipmedt5':
+          workIpmedt5Clickbait.classList.toggle("show");
+          break;
+        default:
+
+      }
+    }
+
     for (let i = 0; i < workThumb.length; i++) {
       workThumb[i].onmouseover = () => {
         workThumb[i].parentElement.style.zIndex = 10;
+        displayClickbait(workThumb[i]);
         // workThumb[i].classList.toggle("change");
       }
     }
@@ -66,6 +92,7 @@ window.onload = function(){
     for (let i = 0; i < workThumb.length; i++) {
       workThumb[i].onmouseout = () => {
         workThumb[i].parentElement.style.zIndex = 3;
+        displayClickbait(workThumb[i]);
         // workThumb[i].classList.toggle("change");
       }
     }
@@ -79,11 +106,11 @@ window.onload = function(){
       if (menuBool === false) {
         timeoutTime = 100;
         menuBool = !menuBool;
-        console.log(menuBool);
+        // console.log(menuBool);
       } else {
         timeoutTime = 40;
         menuBool = !menuBool;
-        console.log(menuBool);
+        // console.log(menuBool);
       }
 
       barContainerBg.classList.toggle("change");
