@@ -43,16 +43,32 @@ window.onload = function(){
     document.addEventListener("mousemove", detectMouse);
 
   }else if (window.location.pathname === '/public/work.html'){
-    let firstBar = document.getElementById("js--firstBar");
-    let secondBar = document.getElementById("js--secondBar");
-    let thirdBar = document.getElementById("js--thirdBar");
+    const firstBar = document.getElementById("js--firstBar");
+    const secondBar = document.getElementById("js--secondBar");
+    const thirdBar = document.getElementById("js--thirdBar");
     const barContainer = document.getElementById("js--barContainer");
     const barContainerBg = document.getElementById("js--barContainerBg");
     const navbarList = document.getElementById('js--navbar-list');
     const navbarWork = document.getElementById('js--navbar-work');
     const navbarProfile = document.getElementById('js--navbar-profile');
 
+    const workThumb = document.getElementsByClassName('work__pair-thumb');
+
     let menuBool = false;
+
+    for (let i = 0; i < workThumb.length; i++) {
+      workThumb[i].onmouseover = () => {
+        workThumb[i].parentElement.style.zIndex = 10;
+        // workThumb[i].classList.toggle("change");
+      }
+    }
+
+    for (let i = 0; i < workThumb.length; i++) {
+      workThumb[i].onmouseout = () => {
+        workThumb[i].parentElement.style.zIndex = 3;
+        // workThumb[i].classList.toggle("change");
+      }
+    }
 
     barContainer.onmousedown = function (){
       firstBar.classList.toggle("change");

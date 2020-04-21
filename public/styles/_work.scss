@@ -1,0 +1,84 @@
+@import 'variables';
+
+.work{
+
+  &-main{
+
+  }
+
+  &__pair{
+    background-color: black;
+    width: 75%;
+    margin: 15.4% auto 0 auto;
+    transform: rotate(-45deg);
+    position: relative;
+    z-index: 5;
+
+    &:after{
+      content: "";
+      display: block;
+      padding-bottom: 50%;
+    }
+
+    &.non-first{
+      left: -0.25%;
+      margin-top: 14.6%;
+      z-index: 3;
+    }
+
+    &-thumb{
+      width: 48.5%;
+      height: 96%;
+      // object-fit: cover;
+      // object-position: 50% 50%;
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      margin: 1%;
+      transition: .4s;
+
+      &:hover{
+        transform: scale(1.05) rotate(45deg);
+        filter: blur(4px);
+        z-index: 10;
+        cursor: pointer;
+
+        &:before{
+          transform: rotate(0deg);
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &.first-item{
+        right: 0;
+      }
+
+      // &.change{
+      //   filter: blur(4px);
+      // }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        top: -25%;
+        left: -25%;
+        z-index: -1;
+        background: url(../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
+        background-size: cover;
+        transition: .4s;
+        transform: rotate(45deg);
+      }
+    }
+
+    &__text{
+      width: 100px;
+      height: 50px;
+      background-color: white;
+    }
+  }
+}

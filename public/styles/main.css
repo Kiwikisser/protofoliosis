@@ -171,5 +171,66 @@ body {
 .bar-container__bar--1.change, .bar-container__bar--2.change, .bar-container__bar--3.change {
   background-color: black;
 }
+.work__pair {
+  background-color: black;
+  width: 75%;
+  margin: 15.4% auto 0 auto;
+  transform: rotate(-45deg);
+  position: relative;
+  z-index: 5;
+}
+.work__pair:after {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
+.work__pair.non-first {
+  left: -0.25%;
+  margin-top: 14.6%;
+  z-index: 3;
+}
+.work__pair-thumb {
+  width: 48.5%;
+  height: 96%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  margin: 1%;
+  transition: 0.4s;
+}
+.work__pair-thumb:hover {
+  transform: scale(1.05) rotate(45deg);
+  filter: blur(4px);
+  z-index: 10;
+  cursor: pointer;
+}
+.work__pair-thumb:hover:before {
+  transform: rotate(0deg);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.work__pair-thumb.first-item {
+  right: 0;
+}
+.work__pair-thumb:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  z-index: -1;
+  background: url(../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
+  background-size: cover;
+  transition: 0.4s;
+  transform: rotate(45deg);
+}
+.work__pair__text {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+}
 
 /*# sourceMappingURL=main.css.map */
