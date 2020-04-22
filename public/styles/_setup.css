@@ -12,6 +12,7 @@ body {
   background-color: #f3f3f3;
   width: auto;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=_setup.css.map */

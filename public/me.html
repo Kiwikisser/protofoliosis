@@ -13,9 +13,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/main.css">
-    <title>My Work</title>
+    <title>This Is Me</title>
   </head>
-  <body data-page="work">
+  <body data-page="me">
     <nav class="navbar">
       <div id="js--barContainerBg" class="bar-container__background"></div>
       <ol id="js--navbar-list" class="navbar__list">
@@ -24,48 +24,41 @@
           <div id="js--secondBar" class="bar-container__bar--2"></div>
           <div id="js--thirdBar" class="bar-container__bar--3"></div>
         </li>
-        <li id="js--navbar-work" class="navbar__list__item navbar-work active">
-          <a href="#">WORK</a>
+        <li id="js--navbar-work" class="navbar__list__item navbar-work">
+          <a href="work.html">WORK</a>
         </li>
-        <li id="js--navbar-profile" class="navbar__list__item navbar-profile">
-          <a href="me.html">ME</a>
+        <li id="js--navbar-profile" class="navbar__list__item navbar-profile active">
+          <a href="#">ME</a>
         </li>
       </ol>
     </nav>
 
-    <main class="work-main">
-      <header>
-        <h2 class="work__header__title">My Work</h2>
-      </header>
+    <header class="me__header">
+      <h2 class="me__header__title">Me</h2>
+    </header>
 
-      <section class="work__pair">
-        <!-- <img class="work__pair-thumb" src="media/workThumbnails/ipmedt2.png" alt=""> -->
-        <div class="work__pair__clickbait cb1">
-          <h3>Interactive Storytelling</h3>
-        </div>
-        <div id="js--ipmedt2" class="work__pair-thumb ipmedt2 first-item"></div>
+    <main class="me-main">
+      <section class="me__container">
+        <article class="me__container__slides">
+          <div class="me__container__slides-info">
+            <h3 class="me__container__slides-info__title">Amos Peperkamp</h3>
+            <p>Hi, my name is Amos and I was born and raised in a city called Alphen aan den Rijn in Holland, which I still reside in as the average broke student. My childhood consisted of playing lots of videogames as I’m fascinated by virtually witnessing all kinds of fictional stories. Despite loving videogames and being somewhat adept at playing them, I’m not activel pursuing it for my future. Instead I started focusing on something else related to computers, which is programming. I’m motivated to design and write code because it’s something I can endlessly sink my time and creative ideas into. If I see a complicated challenge that is in my power to solve or create then leave it to me.</p>
+          </div>
 
-        <div class="work__pair__clickbait cb2">
-          <h3>Museum Arcade</h3>
-        </div>
-        <div class="work__pair-thumb iipmedt"></div>
+          <!-- <div class="me__container__slides-competences">
+
+          </div> -->
+        </article>
       </section>
+      <div class="me__pictures">
+        <div id="js--my-picture" class="me__pictures__image yaboi1">
 
-      <section class="work__pair non-first">
-        <div class="work__pair__clickbait cb3">
-          <h3>Laboratory VR</h3>
         </div>
-        <div class="work__pair-thumb ipmedt3 first-item"></div>
-
-        <div class="work__pair__clickbait cb4">
-          <h3>Smart Chair</h3>
-        </div>
-        <div class="work__pair-thumb ipmedt5"></div>
-      </section>
-      <section class="work__pair non-first">
-        <div class="work__pair-thumb first-item"></div>
-        <div class="work__pair-thumb"></div>
-      </section>
+      </div>
     </main>
+
+    <!-- <section>
+      experience
+    </section> -->
   </body>
 </html>
