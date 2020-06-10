@@ -4,6 +4,12 @@
   clear: both;
 }
 
+.clearfix:after, .navbar__list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .navbar {
   width: 25%;
   height: 10vh;
@@ -24,7 +30,7 @@
   background-color: white;
   margin-left: 100px;
   z-index: 0;
-  background: linear-gradient(225deg, transparent 23px, #fff 0) top right, linear-gradient(315deg, transparent 23px, #fff 0) bottom right;
+  background: linear-gradient(225deg, transparent 23px, #fff 0) top right, linear-gradient(315deg, transparent 23px, #fbfbfb 0) bottom right;
   background-size: 100% 51%;
   background-repeat: no-repeat;
 }

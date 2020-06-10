@@ -1,3 +1,7 @@
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /*# sourceMappingURL=_variables.css.map */

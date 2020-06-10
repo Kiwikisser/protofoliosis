@@ -151,6 +151,7 @@ window.onload = function(){
 
   }else if ($("body").data("page") === "me"){
     const myPicture = document.getElementById('js--my-picture');
+    const experienceThumbs = document.getElementsByClassName('experience-item__figure');
 
     // onclick
     // change image
@@ -186,6 +187,16 @@ window.onload = function(){
     }
 
     myPicture.addEventListener("click", changeMyPicture);
+
+    for (var i = 0; i < experienceThumbs.length; i++) {
+      experienceThumbs[i].addEventListener("click", (e) =>{
+        // console.log(e.target.parentElement.nodeName); //figure
+        // console.log(e.target); //img
+
+        e.target.classList.toggle("toggleOn");
+        e.target.parentElement.classList.toggle("toggleOn");
+      });
+    }
     // myPicture.addEventListener("mouseup", changeMyPicture);
   }
 
