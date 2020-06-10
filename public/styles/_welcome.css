@@ -65,10 +65,11 @@
 }
 .welcome__reception h1 {
   margin-bottom: 35px;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .welcome__reception p {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=_welcome.css.map */

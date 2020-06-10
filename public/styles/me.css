@@ -39,11 +39,11 @@
 }
 .me__container__slides-info {
   margin-top: 10%;
-  margin-left: 10%;
-  width: 60%;
+  margin-left: 18%;
+  width: 50%;
 }
 .me__container__slides-info__title {
-  font-size: 5em;
+  font-size: 5rem;
   max-width: 60%;
   text-align: center;
   margin-left: 37%;
@@ -51,7 +51,7 @@
   color: #4a0000;
 }
 .me__container__slides-info p {
-  font-size: 1.5em;
+  font-size: 1.2rem;
 }
 .me__pictures {
   position: absolute;
