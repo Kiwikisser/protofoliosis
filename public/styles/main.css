@@ -10,6 +10,36 @@
   clear: both;
 }
 
+.pulse {
+  display: block;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
+  animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.65);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 20px rgba(230, 37, 41, 0);
+    box-shadow: 0 0 0 20px rgba(230, 37, 41, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(230, 37, 41, 0);
+    box-shadow: 0 0 0 0 rgba(230, 37, 41, 0);
+  }
+}
+.clearfix:after, .experience-item:after, .navbar__list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -175,6 +205,11 @@ body {
   max-height: 65px;
 }
 
+@media (max-width: 1281px) {
+  .navbar {
+    width: 40%;
+  }
+}
 .clearfix:after, .experience-item:after, .navbar__list:after {
   content: "";
   display: table;
@@ -487,8 +522,14 @@ body {
 }
 
 .experience {
-  margin: 25% auto;
+  margin: 18% auto;
   width: 80%;
+}
+.experience__title {
+  font-size: 8rem;
+  margin: 0 8% 15% 8%;
+  font-family: "Orbitron", sans-serif;
+  color: #4a0000;
 }
 .experience-item {
   width: 100%;
@@ -496,16 +537,18 @@ body {
   margin-bottom: 300px;
 }
 .experience-item__figure {
-  background-color: crimson;
+  background-color: rgba(0, 0, 0, 0.85);
   width: 300px;
   position: relative;
   overflow: hidden;
   float: left;
   transform: rotate(45deg);
   transition: 0.4s;
+  cursor: pointer;
 }
 .experience-item__figure.toggleOn {
   transform: rotate(-45deg);
+  background-color: black;
 }
 .experience-item__figure:after {
   content: "";
@@ -520,6 +563,7 @@ body {
   height: 100%;
   object-fit: cover;
   transform: rotate(-45deg);
+  pointer-events: none;
 }
 .experience-item__figure > img.toggleOn {
   transform: rotate(45deg);
@@ -533,12 +577,12 @@ body {
 .experience-item__info__frame {
   height: 80%;
   top: 10%;
-  left: 10%;
+  left: 7%;
   width: 90%;
   background-color: darkslategray;
   position: relative;
-  background: linear-gradient(225deg, transparent 85px, #fff 0) top right, linear-gradient(315deg, transparent 85px, #fff 0) bottom right;
-  background-size: 100% 50%;
+  background: linear-gradient(135deg, transparent 85px, #fff 0) top left, linear-gradient(45deg, transparent 85px, #fff 0) bottom left, linear-gradient(225deg, transparent 85px, #fff 0) top right, linear-gradient(315deg, transparent 85px, #fff 0) bottom right;
+  background-size: 51% 50.3%;
   background-repeat: no-repeat;
 }
 .experience-item__info__frame > h3 {
@@ -547,14 +591,69 @@ body {
   left: 20%;
   position: absolute;
   transform: translateY(-50%);
+  color: white;
 }
 .experience-item__info__frame__benis {
-  background: linear-gradient(225deg, transparent 85px, #151515 0) top right, linear-gradient(315deg, transparent 85px, #131313 0) bottom right;
-  background-size: 100% 50.3%;
+  background: linear-gradient(135deg, transparent 85px, #151515 0) top left, linear-gradient(45deg, transparent 85px, #131313 0) bottom left, linear-gradient(225deg, transparent 85px, #151515 0) top right, linear-gradient(315deg, transparent 85px, #131313 0) bottom right;
+  background-size: 51% 50.3%;
   background-repeat: no-repeat;
   height: 100%;
-  width: 50%;
+  width: 0;
   transition: 0.4s;
+}
+.experience-item__info__frame__benis.toggleOn.aframe {
+  width: 75%;
+}
+.experience-item__info__frame__benis.toggleOn.arduino {
+  width: 80%;
+}
+.experience-item__info__frame__benis.toggleOn.figma {
+  width: 80%;
+}
+.experience-item__info__frame__benis.toggleOn.html5 {
+  width: 90%;
+}
+.experience-item__info__frame__benis.toggleOn.java {
+  width: 40%;
+}
+.experience-item__info__frame__benis.toggleOn.javascript {
+  width: 70%;
+}
+.experience-item__info__frame__benis.toggleOn.laravel {
+  width: 50%;
+}
+.experience-item__info__frame__benis.toggleOn.python {
+  width: 43%;
+}
+.experience-item__info__frame__benis.toggleOn.sass {
+  width: 70%;
+}
+
+@media (max-width: 1281px) {
+  .me__container__slides-info {
+    width: 55%;
+  }
+  .me__container__slides-info__title {
+    font-size: 3rem;
+  }
+  .me__container__slides-info > p {
+    font-size: 0.9rem;
+  }
+
+  .experience-item {
+    height: 200px;
+  }
+  .experience-item__figure {
+    width: 200px;
+  }
+  .experience-item__info__frame {
+    left: 4%;
+    width: 95%;
+  }
+  .experience-item__info__frame > h3 {
+    left: 22%;
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

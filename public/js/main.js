@@ -105,10 +105,24 @@ window.onload = function(){
     const workIpmedt2Thumb = document.getElementById('js--ipmedt2');
     const suiniflow = 'https://suiniflow.firebaseapp.com/';
 
+    const workIipmedtThumb = document.getElementById('js--iipmedt');
+    const museumArcade = 'https://kiwikisser.github.io';
+
+    const workIpmedt3Thumb = document.getElementById('js--ipmedt3');
+    const labVR = 'https://youtu.be/yuHJ6S7axkc';
+
     const workThumb = document.getElementsByClassName('work__pair-thumb');
 
     workIpmedt2Thumb.onmousedown = () => {
       window.location.href = suiniflow;
+    }
+
+    workIipmedtThumb.onmousedown = () => {
+      window.location.href = museumArcade;
+    }
+
+    workIpmedt3Thumb.onmousedown = () => {
+      window.location.href = labVR;
     }
 
     displayClickbait = (elem) => {
@@ -152,6 +166,15 @@ window.onload = function(){
   }else if ($("body").data("page") === "me"){
     const myPicture = document.getElementById('js--my-picture');
     const experienceThumbs = document.getElementsByClassName('experience-item__figure');
+    const aframeLevel = document.getElementsByClassName('aframe')[0];
+    const arduinoLevel = document.getElementsByClassName('arduino')[0];
+    const figmaLevel = document.getElementsByClassName('figma')[0];
+    const html5Level = document.getElementsByClassName('html5')[0];
+    const javaLevel = document.getElementsByClassName('java')[0];
+    const javascriptLevel = document.getElementsByClassName('javascript')[0];
+    const laravelLevel = document.getElementsByClassName('laravel')[0];
+    const pythonLevel = document.getElementsByClassName('python')[0];
+    const sassLevel = document.getElementsByClassName('sass')[0];
 
     // onclick
     // change image
@@ -190,11 +213,45 @@ window.onload = function(){
 
     for (var i = 0; i < experienceThumbs.length; i++) {
       experienceThumbs[i].addEventListener("click", (e) =>{
-        // console.log(e.target.parentElement.nodeName); //figure
-        // console.log(e.target); //img
-
+        // console.log(e.target.parentElement.nodeName); //section
+        // console.log(e.target); //figure
+        // console.log(e.target.firstElementChild); //img
         e.target.classList.toggle("toggleOn");
-        e.target.parentElement.classList.toggle("toggleOn");
+        e.target.firstElementChild.classList.toggle("toggleOn");
+        // console.log($(e.target).data("subject"));
+        let subject = $(e.target.firstElementChild).data("subject");
+        switch (subject) {
+          case "aframe":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "arduino":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "figma":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "html5":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "java":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "javascript":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "laravel":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "python":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          case "sass":
+            document.getElementsByClassName(subject)[0].classList.toggle("toggleOn");
+            break;
+          default:
+
+        }
+
       });
     }
     // myPicture.addEventListener("mouseup", changeMyPicture);
