@@ -111,6 +111,9 @@ window.onload = function(){
     const workIpmedt3Thumb = document.getElementById('js--ipmedt3');
     const labVR = 'https://youtu.be/yuHJ6S7axkc';
 
+    const workFigmaThumb = document.getElementById('js--ipmedt5');
+    const portfolioFigma = 'https://www.figma.com/proto/xc7dbX4OiMpkPmWNku2xCq/de_laatste_meloen?node-id=1%3A2&viewport=-201%2C205%2C0.7313714027404785&scaling=scale-down';
+
     const workThumb = document.getElementsByClassName('work__pair-thumb');
 
     workIpmedt2Thumb.onmousedown = () => {
@@ -123,6 +126,10 @@ window.onload = function(){
 
     workIpmedt3Thumb.onmousedown = () => {
       window.location.href = labVR;
+    }
+
+    workFigmaThumb.onmousedown = () => {
+      window.location.href = portfolioFigma;
     }
 
     displayClickbait = (elem) => {
