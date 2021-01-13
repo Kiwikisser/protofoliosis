@@ -3,6 +3,9 @@ window.onload = function(){
   const viewPortWidth = document.documentElement.clientWidth;
   const viewPortHeight = document.documentElement.clientHeight;
   // alert(viewPortWidth + ", " + viewPortHeight);
+
+  console.log($(window).height());
+  console.log($(window).width());
   // 1903 969
 
   if($("body").data("page") !== "index"){

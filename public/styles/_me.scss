@@ -289,7 +289,8 @@
   }
 }
 
-@media (max-width: 1281px ){
+// landscape smaller than HiDPI
+@media (max-width: 1441px ) and (min-width: 801px) {
   .me__container__slides-info{
     width: 55%;
 
@@ -298,7 +299,7 @@
     }
 
     &>p{
-      font-size: .9rem;
+      font-size: 1rem;
     }
   }
 
@@ -317,6 +318,30 @@
         left: 22%;
         font-size: 3rem;
       }
+    }
+  }
+}
+
+
+// portrait smaller than pixel 2XL
+@media (max-width: 420px){
+  .me{
+    &-main{
+      width: 100%;
+
+      &:after{
+        padding-bottom: 0;
+      }
+    }
+
+    &__container{
+      width: inherit;
+      bottom: 0;
+    }
+
+    &__pictures{
+      top: 0;
+      bottom: unset;
     }
   }
 }

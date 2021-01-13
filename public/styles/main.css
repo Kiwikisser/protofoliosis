@@ -52,8 +52,6 @@ html {
 
 body {
   background-color: #f3f3f3;
-  width: auto;
-  height: 100vh;
   overflow-x: hidden;
   font-size: 62.5%;
 }
@@ -629,7 +627,7 @@ body {
   width: 70%;
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 1441px) and (min-width: 801px) {
   .me__container__slides-info {
     width: 55%;
   }
@@ -637,7 +635,7 @@ body {
     font-size: 3rem;
   }
   .me__container__slides-info > p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .experience-item {
@@ -653,6 +651,22 @@ body {
   .experience-item__info__frame > h3 {
     left: 22%;
     font-size: 3rem;
+  }
+}
+@media (max-width: 420px) {
+  .me-main {
+    width: 100%;
+  }
+  .me-main:after {
+    padding-bottom: 0;
+  }
+  .me__container {
+    width: inherit;
+    bottom: 0;
+  }
+  .me__pictures {
+    top: 0;
+    bottom: unset;
   }
 }
 

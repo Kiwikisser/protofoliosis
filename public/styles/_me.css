@@ -233,7 +233,7 @@
   width: 70%;
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 1441px) and (min-width: 801px) {
   .me__container__slides-info {
     width: 55%;
   }
@@ -241,7 +241,7 @@
     font-size: 3rem;
   }
   .me__container__slides-info > p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .experience-item {
@@ -259,5 +259,21 @@
     font-size: 3rem;
   }
 }
+@media (max-width: 420px) {
+  .me-main {
+    width: 100%;
+  }
+  .me-main:after {
+    padding-bottom: 0;
+  }
+  .me__container {
+    width: inherit;
+    bottom: 0;
+  }
+  .me__pictures {
+    top: 0;
+    bottom: unset;
+  }
+}
 
-/*# sourceMappingURL=me.css.map */
+/*# sourceMappingURL=_me.css.map */
