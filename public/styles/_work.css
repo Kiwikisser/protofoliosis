@@ -97,7 +97,7 @@
   transform: rotate(45deg);
 }
 .work__pair-thumb.iclock_air:before {
-  background: url(../media/workThumbnails/melon.png) 0 0 no-repeat;
+  background: url(../media/workThumbnails/iclock_air.jpeg) 0 0 no-repeat;
   content: "";
   position: absolute;
   width: 150%;
