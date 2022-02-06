@@ -118,7 +118,7 @@ window.onload = function(){
     // const portfolioFigma = 'https://www.figma.com/proto/xc7dbX4OiMpkPmWNku2xCq/de_laatste_meloen?node-id=1%3A2&viewport=-201%2C205%2C0.7313714027404785&scaling=scale-down';
 
     const workIROBThumb = document.getElementById('js--iClock_Air');
-    const portfolioFigma = 'https://youtu.be/VUBuVYAL3r4';
+    const iClockAir = 'https://youtu.be/VUBuVYAL3r4';
 
     const workThumb = document.getElementsByClassName('work__pair-thumb');
 
@@ -135,7 +135,7 @@ window.onload = function(){
     }
 
     workIROBThumb.onmousedown = () => {
-      window.location.href = portfolioFigma;
+      window.location.href = iClockAir;
     }
 
     displayClickbait = (elem) => {
