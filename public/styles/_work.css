@@ -31,7 +31,7 @@
   margin-top: 14.6%;
   z-index: 3;
 }
-.work__pair-thumb.ipmedt2, .work__pair-thumb.iipmedt, .work__pair-thumb.ipmedt3, .work__pair-thumb.ipmedt5 {
+.work__pair-thumb.ipmedt2, .work__pair-thumb.iipmedt, .work__pair-thumb.ipmedt3, .work__pair-thumb.iclock_air {
   width: 48.5%;
   height: 96%;
   display: block;
@@ -40,17 +40,17 @@
   margin: 1%;
   transition: 0.4s;
 }
-.work__pair-thumb.ipmedt2.first-item, .work__pair-thumb.iipmedt.first-item, .work__pair-thumb.ipmedt3.first-item, .work__pair-thumb.ipmedt5.first-item {
+.work__pair-thumb.ipmedt2.first-item, .work__pair-thumb.iipmedt.first-item, .work__pair-thumb.ipmedt3.first-item, .work__pair-thumb.iclock_air.first-item {
   right: 0;
 }
-.work__pair-thumb.ipmedt2:hover, .work__pair-thumb.iipmedt:hover, .work__pair-thumb.ipmedt3:hover, .work__pair-thumb.ipmedt5:hover {
+.work__pair-thumb.ipmedt2:hover, .work__pair-thumb.iipmedt:hover, .work__pair-thumb.ipmedt3:hover, .work__pair-thumb.iclock_air:hover {
   transform: scale(1.05) rotate(45deg);
   filter: blur(3px);
   z-index: 10;
   cursor: pointer;
   outline: 15px solid #efefef;
 }
-.work__pair-thumb.ipmedt2:hover:before, .work__pair-thumb.iipmedt:hover:before, .work__pair-thumb.ipmedt3:hover:before, .work__pair-thumb.ipmedt5:hover:before {
+.work__pair-thumb.ipmedt2:hover:before, .work__pair-thumb.iipmedt:hover:before, .work__pair-thumb.ipmedt3:hover:before, .work__pair-thumb.iclock_air:hover:before {
   transform: rotate(0deg);
   height: 100%;
   width: 100%;
@@ -96,7 +96,7 @@
   transition: 0.4s;
   transform: rotate(45deg);
 }
-.work__pair-thumb.ipmedt5:before {
+.work__pair-thumb.iclock_air:before {
   background: url(../media/workThumbnails/melon.png) 0 0 no-repeat;
   content: "";
   position: absolute;

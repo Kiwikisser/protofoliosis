@@ -36,7 +36,7 @@
       z-index: 3;
     }
 
-    &-thumb.ipmedt2, &-thumb.iipmedt, &-thumb.ipmedt3, &-thumb.ipmedt5{
+    &-thumb.ipmedt2, &-thumb.iipmedt, &-thumb.ipmedt3, &-thumb.iclock_air{
       width: 48.5%;
       height: 96%;
       // object-fit: cover;
@@ -124,7 +124,7 @@
       transform: rotate(45deg);
     }
 
-    &-thumb.ipmedt5:before{
+    &-thumb.iclock_air:before{
       background: url(../media/workThumbnails/melon.png) 0 0 no-repeat;
       content: "";
       position: absolute;

@@ -103,7 +103,7 @@ window.onload = function(){
     const workIpmedt2Clickbait = document.getElementsByClassName('cb1')[0];
     const workIipmedtClickbait = document.getElementsByClassName('cb2')[0];
     const workIpmedt3Clickbait = document.getElementsByClassName('cb3')[0];
-    const workIpmedt5Clickbait = document.getElementsByClassName('cb4')[0];
+    const workIROBClickbait = document.getElementsByClassName('cb4')[0];
 
     const workIpmedt2Thumb = document.getElementById('js--ipmedt2');
     const suiniflow = 'https://suiniflow.firebaseapp.com/';
@@ -114,8 +114,11 @@ window.onload = function(){
     const workIpmedt3Thumb = document.getElementById('js--ipmedt3');
     const labVR = 'https://youtu.be/yuHJ6S7axkc';
 
-    const workFigmaThumb = document.getElementById('js--ipmedt5');
-    const portfolioFigma = 'https://www.figma.com/proto/xc7dbX4OiMpkPmWNku2xCq/de_laatste_meloen?node-id=1%3A2&viewport=-201%2C205%2C0.7313714027404785&scaling=scale-down';
+    // const workFigmaThumb = document.getElementById('js--figma_portfolio');
+    // const portfolioFigma = 'https://www.figma.com/proto/xc7dbX4OiMpkPmWNku2xCq/de_laatste_meloen?node-id=1%3A2&viewport=-201%2C205%2C0.7313714027404785&scaling=scale-down';
+
+    const workIROBThumb = document.getElementById('js--iClock_Air');
+    const portfolioFigma = 'https://youtu.be/VUBuVYAL3r4';
 
     const workThumb = document.getElementsByClassName('work__pair-thumb');
 
@@ -131,7 +134,7 @@ window.onload = function(){
       window.location.href = labVR;
     }
 
-    workFigmaThumb.onmousedown = () => {
+    workIROBThumb.onmousedown = () => {
       window.location.href = portfolioFigma;
     }
 
@@ -148,8 +151,8 @@ window.onload = function(){
         case 'ipmedt3':
           workIpmedt3Clickbait.classList.toggle("show");
           break;
-        case 'ipmedt5':
-          workIpmedt5Clickbait.classList.toggle("show");
+        case 'iclock_air':
+          workIROBClickbait.classList.toggle("show");
           break;
         default:
 
