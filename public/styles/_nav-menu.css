@@ -11,7 +11,6 @@
 }
 
 .navbar {
-  width: 25%;
   height: 10vh;
   margin-top: 40px;
   position: fixed;
@@ -65,9 +64,16 @@
   max-height: 65px;
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 420px) {
   .navbar {
-    width: 40%;
+    height: unset;
+  }
+  .navbar__list {
+    margin-left: 50px;
+    padding-left: 27px;
+  }
+  .navbar__list__item, .navbar__list__item--right {
+    margin-left: 30px;
   }
 }
 

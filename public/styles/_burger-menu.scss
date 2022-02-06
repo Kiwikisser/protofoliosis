@@ -69,3 +69,13 @@
   }
 
 }
+
+@media (max-width: $phone_width ){
+  .bar-container{
+    margin-left: -52px;
+    
+    &__background{
+      margin-left: 23px;
+    }
+  }
+}

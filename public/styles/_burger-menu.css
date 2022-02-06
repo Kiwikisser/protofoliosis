@@ -1,3 +1,9 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .bar-container {
   margin-top: 1px;
   margin-left: -25px;
@@ -35,6 +41,14 @@
 }
 .bar-container__bar--1.change, .bar-container__bar--2.change, .bar-container__bar--3.change {
   background-color: black;
+}
+@media (max-width: 420px) {
+  .bar-container {
+    margin-left: -52px;
+  }
+  .bar-container__background {
+    margin-left: 23px;
+  }
 }
 
 /*# sourceMappingURL=_burger-menu.css.map */

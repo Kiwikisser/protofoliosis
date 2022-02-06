@@ -271,8 +271,9 @@
     bottom: 0;
   }
   .me__pictures {
-    top: 0;
+    top: -20%;
     bottom: unset;
+    right: -20%;
   }
 }
 

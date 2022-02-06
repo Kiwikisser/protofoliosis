@@ -328,20 +328,26 @@
   .me{
     &-main{
       width: 100%;
+      margin-top: 260px;
 
       &:after{
         padding-bottom: 0;
       }
     }
 
+    &__header{
+      margin-top: 120px;
+    }
+
     &__container{
-      width: inherit;
+      width: unset;
       bottom: 0;
     }
 
     &__pictures{
-      top: 0;
+      top: -20%;
       bottom: unset;
+      right: -20%;
     }
   }
 }
