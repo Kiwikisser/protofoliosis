@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: $base_colour;
+  background-color: variables.$base_colour;
   overflow-x: hidden;
   font-size: 62.5%;
   height: 100vh;

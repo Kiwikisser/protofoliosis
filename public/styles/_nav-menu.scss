@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 .clearfix{
   &:after{
     content: "";
@@ -10,9 +10,9 @@
 .navbar{
   // width: 25%;
   height: 10vh;
-  margin-top: $default_y_gap*2;
+  margin-top: variables.$default_y_gap*2;
   position: fixed;
-  top: 0;
+  top: 0; 
   z-index: 100;
 
   &-work.roll,&-profile.roll{
@@ -20,7 +20,7 @@
   }
 
   &-work:hover,&-profile:hover{
-    box-shadow: inset 0px -5px 0px 0px $primary_colour;
+    box-shadow: inset 0px -5px 0px 0px variables.$primary_colour;
   }
 
   // &-profile.roll{
@@ -42,7 +42,7 @@
       color: black;
       display: none;
       float: left;
-      margin-left: $default_x_gap*3;
+      margin-left: variables.$default_x_gap*3;
       margin-top: 15px;
       font-size: 1.5rem;
       padding-bottom: 10px;
@@ -86,7 +86,7 @@
 //   }
 // }
 
-@media (max-width: $phone_width ){
+@media (max-width: variables.$phone_width ){
   .navbar{
     height: unset;
 

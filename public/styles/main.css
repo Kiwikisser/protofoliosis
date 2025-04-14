@@ -4,12 +4,6 @@
   clear: both;
 }
 
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .pulse {
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
@@ -34,12 +28,6 @@
     box-shadow: 0 0 0 0 rgba(230, 37, 41, 0);
   }
 }
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -55,12 +43,6 @@ body {
   overflow-x: hidden;
   font-size: 62.5%;
   height: 100vh;
-}
-
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .welcome {
@@ -137,13 +119,7 @@ body {
   font-size: 1rem;
 }
 
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.clearfix:after, .experience-item:after, .navbar__list:after {
+.clearfix:after, .navbar__list:after {
   content: "";
   display: table;
   clear: both;
@@ -215,12 +191,6 @@ body {
     margin-left: 30px;
   }
 }
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .bar-container {
   margin-top: 1px;
   margin-left: -25px;
@@ -267,12 +237,6 @@ body {
     margin-left: 23px;
   }
 }
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .work-main {
   margin-top: 200px;
 }
@@ -405,12 +369,6 @@ body {
 }
 .work__pair__clickbait.cb1.show, .work__pair__clickbait.cb2.show, .work__pair__clickbait.cb3.show, .work__pair__clickbait.cb4.show {
   opacity: 1;
-}
-
-.clearfix:after, .experience-item:after, .navbar__list:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .me__header {
@@ -561,7 +519,7 @@ body {
 }
 .experience-item__figure.toggleOn {
   transform: rotate(-45deg);
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 .experience-item__figure:after {
   content: "";
@@ -652,7 +610,6 @@ body {
   .me__container__slides-info > p {
     font-size: 1rem;
   }
-
   .experience-item {
     height: 200px;
   }

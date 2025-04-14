@@ -1,16 +1,16 @@
-@import 'variables';
-@import 'pulse';
-@import 'setup';
-@import 'welcome';
-@import 'nav-menu';
-@import 'burger-menu';
-@import 'work';
-@import 'me';
+@use 'variables';
+@use 'pulse';
+@use 'setup';
+@use 'welcome';
+@use 'nav-menu';
+@use 'burger-menu';
+@use 'work';
+@use 'me';
 
-@media (max-width: $hidpi_width ) and (min-width: $tablet_width) {
+@media (max-width: variables.$hidpi_width ) and (min-width: variables.$tablet_width) {
 
 }
 
-@media (max-width: $phone_width ){
-  
+@media (max-width: variables.$phone_width ){
+   
 }
