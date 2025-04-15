@@ -83,7 +83,7 @@
     }
 
     &-thumb.ipmedt2:before{
-      background: url(../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
+      background: url(../../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
       content: "";
       position: absolute;
       width: 150%;
@@ -104,14 +104,14 @@
       top: -25%;
       left: -25%;
       z-index: -1;
-      background: url(../media/workThumbnails/iipmedt_1.jpeg) 0 0 no-repeat;
+      background: url(../../media/workThumbnails/iipmedt_1.jpeg) 0 0 no-repeat;
       background-size: cover;
       transition: .4s;
       transform: rotate(45deg);
     }
 
     &-thumb.ipmedt3:before{
-      background: url(../media/workThumbnails/ipmedt3.png) 0 0 no-repeat;
+      background: url(../../media/workThumbnails/ipmedt3.png) 0 0 no-repeat;
       content: "";
       position: absolute;
       width: 150%;
@@ -125,7 +125,7 @@
     }
 
     &-thumb.iclock_air:before{
-      background: url(../media/workThumbnails/iclock_air.jpeg) 0 0 no-repeat;
+      background: url(../../media/workThumbnails/iclock_air.jpeg) 0 0 no-repeat;
       content: "";
       position: absolute;
       width: 150%;
