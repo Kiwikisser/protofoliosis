@@ -3,14 +3,12 @@
  * @description JS file included in all pages.
  * @author Amos Peperkamp
  */
-console.log("loaded main.js file");
+
+const infoLogging = true;
+infoLog("loaded main.js file");
 
 window.onload = function () {
     loadPageScripts();
-
-    const viewPortWidth = document.documentElement.clientWidth;
-    const viewPortHeight = document.documentElement.clientHeight;
-    // alert(viewPortWidth + ", " + viewPortHeight);
 
     console.log($(window).height());
     console.log($(window).width());
@@ -38,11 +36,9 @@ window.onload = function () {
             if (menuBool === false) {
                 timeoutTime = 100;
                 menuBool = !menuBool;
-                // console.log(menuBool);
             } else {
                 timeoutTime = 40;
                 menuBool = !menuBool;
-                // console.log(menuBool);
             }
 
             barContainerBg.classList.toggle("change");
@@ -59,6 +55,12 @@ window.onload = function () {
     }
 }
 
+function infoLog(message) {
+    if (!infoLogging)
+        return;
+    console.log("INFO: " + message);
+}
+
 function loadPageScripts(){
     switch ($("body").data("page")) {
         case "index":
@@ -71,7 +73,7 @@ function loadPageScripts(){
             loadScript('./js/me.js');
             break;
         default:
-            console.log("no page found");
+            infoLog("no page found");
     }
 }
 
@@ -81,4 +83,11 @@ function loadScript(url) {
     script.type = 'text/javascript';
     script.src = url;
     head.appendChild(script);
+}
+
+function logViewportDimensions(){
+    const viewPortWidth = document.documentElement.clientWidth;
+    const viewPortHeight = document.documentElement.clientHeight;
+    infoLog("Viewport width: " + viewPortWidth + "px");
+    infoLog("Viewport height: " + viewPortHeight + "px");
 }
