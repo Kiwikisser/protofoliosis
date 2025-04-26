@@ -6,19 +6,7 @@
 console.log("loaded main.js file");
 
 window.onload = function () {
-    switch ($("body").data("page")) {
-        case "index":
-            loadScript('./js/index.js');
-            break;
-        case "work":
-            loadScript('./js/work.js');
-            break;
-        case "me":
-            loadScript('./js/me.js');
-            break;
-        default:
-            console.log("no page found");
-    }
+    loadPageScripts();
 
     const viewPortWidth = document.documentElement.clientWidth;
     const viewPortHeight = document.documentElement.clientHeight;
@@ -68,6 +56,22 @@ window.onload = function () {
                 }, timeoutTime);
             }, timeoutTime);
         }
+    }
+}
+
+function loadPageScripts(){
+    switch ($("body").data("page")) {
+        case "index":
+            loadScript('./js/index.js');
+            break;
+        case "work":
+            loadScript('./js/work.js');
+            break;
+        case "me":
+            loadScript('./js/me.js');
+            break;
+        default:
+            console.log("no page found");
     }
 }
 
