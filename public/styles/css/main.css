@@ -178,6 +178,7 @@ body {
 }
 .welcome__zoom {
   transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
+  transform: rotate(315deg) translate(-50%, -50%) !important;
   width: 220vh !important;
   height: 220vh !important;
 }
