@@ -4,6 +4,12 @@
   clear: both;
 }
 
+.make-square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .pulse {
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
@@ -58,7 +64,7 @@ body {
   top: 0;
   z-index: 100;
 }
-.navbar-work.roll, .navbar-profile.roll {
+.navbar-work.menu-roll, .navbar-profile.menu-roll {
   display: inline-block;
 }
 .navbar-work:hover, .navbar-profile:hover {
@@ -100,7 +106,7 @@ body {
 .navbar__list__item--right {
   float: right;
 }
-.navbar__list.roll {
+.navbar__list.menu-roll {
   width: 100%;
   max-height: 65px;
 }
@@ -168,6 +174,15 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  user-drag: none;
+}
+.welcome__zoom {
+  transition: all 0.2s ease-in !important;
+  width: 220vh !important;
+  height: 220vh !important;
+}
+.welcome__zoom article {
+  opacity: 0%;
 }
 .welcome__background {
   height: 110%;
@@ -182,55 +197,60 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   position: absolute;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}
+.welcome__pane, .welcome__reception {
+  transform-origin: top left;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 30vh;
+  height: 30vh;
+  transition: transform 0.2s ease-out;
 }
 .welcome__pane {
-  transform-origin: top left;
   background-color: aliceblue;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: rotate(45deg) translate(-50%, -50%);
-  width: 20%;
   box-shadow: 0px 0px 8px 1px #292929;
   cursor: pointer;
 }
-.welcome__pane:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.welcome__pane:hover {
+  transform: rotate(135deg) translate(-50%, -50%);
+  box-shadow: inset 0px 0px 1px 10px black;
 }
-.welcome__pane section {
-  position: absolute;
+.welcome__pane__border-element {
   width: 101%;
   height: 101%;
   top: -0.5%;
   left: -0.5%;
 }
-.welcome__pane section:hover {
+.welcome__pane__border-element:hover {
   box-shadow: inset 0px 0px 1px 10px black;
 }
 .welcome__reception {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  width: 20%;
   text-align: center;
   pointer-events: none;
 }
-.welcome__reception h1, .welcome__reception p {
-  user-drag: none;
+.welcome__reception__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.welcome__reception__content h1, .welcome__reception__content p {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-.welcome__reception h1 {
+.welcome__reception__content h1 {
   margin-bottom: 20px;
   font-size: 5rem;
 }
-.welcome__reception p {
+.welcome__reception__content p {
   margin-bottom: 20px;
   font-size: 1rem;
 }

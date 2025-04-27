@@ -18,28 +18,27 @@ if (true) { // this causes unused variables to be highlighted
     }
 
     gottaWorkFromHome = () => {
-        //cute fx
-
-        window.location.href = followUpPage;
+        welcomePane.classList.toggle("welcome__zoom");
+        setTimeout(function () {
+            window.location.href = followUpPage;
+        }, 200);
     }
 
+    infoLog("windowWidth: " + windowWidth / 2);
+    infoLog("windowHeight: " + windowHeight / 2);
+
     detectMouse = (e) => {
-        let offsetPaneX = 910;
-        let offsetPaneY = 460;
-        let offsetReceptionX = 875;
-        let offsetReceptionY = 435;
-        let paneModifier = 20;
-        let receptionModifier = 12;
+        let offsetX = windowWidth / 2;
+        let offsetY = windowHeight / 2;
 
-        welcomePane.style.left = e.x / paneModifier + offsetPaneX + "px";
-        welcomePane.style.top = e.y / paneModifier + offsetPaneY + "px";
+        let modifier = 0.05;
+        let modifierText = 0.07;
 
-        welcomeReception.style.left = e.x / receptionModifier + offsetReceptionX + "px";
-        welcomeReception.style.top = e.y / receptionModifier + offsetReceptionY + "px";
+        welcomePane.style.left = offsetX + (e.x - offsetX) * modifier + "px";
+        welcomePane.style.top = offsetY + (e.y - offsetY) * modifier + "px";
 
-        welcomeBackground.style.objectPosition = (e.x / 80) + "% " + ((e.y / 350) + 70) + "% ";
-        welcomeBackground.style.left = (-e.x / 375) + "%";
-        welcomeBackground.style.top = (-e.y / 220) + "%";
+        welcomeReception.style.left = offsetX + (e.x - offsetX) * modifierText + "px";
+        welcomeReception.style.top = offsetY + (e.y - offsetY) * modifierText + "px";
     }
 
     welcomePane.addEventListener("click", gottaWorkFromHome);

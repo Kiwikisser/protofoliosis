@@ -7,6 +7,9 @@
 const infoLogging = true;
 infoLog("loaded main.js file");
 
+const windowHeight = $(window).height();
+const windowWidth = $(window).width();
+
 window.onload = function () {
     loadPageScripts();
 
@@ -43,12 +46,12 @@ window.onload = function () {
 
             barContainerBg.classList.toggle("change");
 
-            navbarList.classList.toggle("roll");
+            navbarList.classList.toggle("menu-roll");
 
             setTimeout(function () {
-                navbarWork.classList.toggle("roll");
+                navbarWork.classList.toggle("menu-roll");
                 setTimeout(function () {
-                    navbarProfile.classList.toggle("roll");
+                    navbarProfile.classList.toggle("menu-roll");
                 }, timeoutTime);
             }, timeoutTime);
         }

@@ -1,19 +1,27 @@
 $hidpi_width: 1441px;
 $tablet_width: 810px;
-$phone_width: 420px; 
+$phone_width: 420px;
 
 $base_colour: #f3f3f3;
 $primary_colour: #4a0000;
 $secondary_colour: #006CB4; //not used
-$tertiary_colour: #3E6F8E;  //not used
+$tertiary_colour: #3E6F8E; //not used
 
 $default_y_gap: 20px;
 $default_x_gap: 30px;
 
-.clearfix{
-  &:after{
-    content: "";
-    display: table;
-    clear: both;
-  }
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.make-square {
+    &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
 }

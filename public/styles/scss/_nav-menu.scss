@@ -15,17 +15,13 @@
   top: 0; 
   z-index: 100;
 
-  &-work.roll,&-profile.roll{
+  &-work.menu-roll,&-profile.menu-roll{
     display: inline-block;
   }
 
   &-work:hover,&-profile:hover{
     box-shadow: inset 0px -5px 0px 0px variables.$primary_colour;
   }
-
-  // &-profile.roll{
-  //   display: inline-block;
-  // }
 
   &__list{
     width: 0%;
@@ -74,7 +70,7 @@
 
   }
 
-  &__list.roll{
+  &__list.menu-roll{
     width: 100%;
     max-height: 65px;
   }
