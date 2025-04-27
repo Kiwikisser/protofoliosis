@@ -9,8 +9,8 @@
   &__header{
 
     &__title{
-      font-size: 9rem;
-      margin: 0 8%;
+      font-size: 8vw;
+      margin: 0 8% 70vh 8%;
       font-family: 'Orbitron', sans-serif;
       color: variables.$primary_colour;
     }
@@ -18,29 +18,22 @@
 
   &__pair{
     background-color: black;
-    width: 75%;
-    margin: 20.4% auto 0 auto;
+    width: 80vw;
+    height: 40vw;
+    margin: 0 auto;
     transform: rotate(-45deg);
     position: relative;
     z-index: 5;
 
-    &:after{
-      content: "";
-      display: block;
-      padding-bottom: 50%;
-    }
-
     &.non-first{
       left: -0.25%;
-      margin-top: 14.6%;
+      margin-top: 15.8%;
       z-index: 3;
     }
 
     &-thumb.ipmedt2, &-thumb.iipmedt, &-thumb.ipmedt3, &-thumb.iclock_air{
       width: 48.5%;
       height: 96%;
-      // object-fit: cover;
-      // object-position: 50% 50%;
       display: block;
       position: absolute;
       overflow: hidden;
@@ -50,20 +43,6 @@
       &.first-item{
         right: 0;
       }
-
-      // &:before{
-      //   content: "";
-      //   position: absolute;
-      //   width: 150%;
-      //   height: 150%;
-      //   top: -25%;
-      //   left: -25%;
-      //   z-index: -1;
-      //   background: url(../media/homeboy.jpg) 0 0 no-repeat;
-      //   background-size: cover;
-      //   transition: .4s;
-      //   transform: rotate(45deg);
-      // }
 
       &:hover{
         transform: scale(1.05) rotate(45deg);
@@ -171,7 +150,6 @@
       &.cb1,&.cb2,&.cb3,&.cb4{
         &.show{
           opacity: 1;
-          // display: block;
         }
       }
     }
