@@ -24,6 +24,7 @@
     transform: rotate(-45deg);
     position: relative;
     z-index: 5;
+    box-shadow: 0px 0px 3px 1px #000000;;
 
     &.non-first{
       left: -0.25%;
