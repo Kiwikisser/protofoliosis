@@ -6,7 +6,7 @@
 infoLog("loaded work.js file");
 
 if (true) { // this causes unused variables to be highlighted
-    const workProjectHovered = document.getElementsByClassName('work__pair-thumb')[0];
+    let workProjectHovered = document.getElementsByClassName('work__pair-thumb')[0];
 
     const workIpmedt2Clickbait = document.getElementsByClassName('cb1')[0];
     const workIipmedtClickbait = document.getElementsByClassName('cb2')[0];
