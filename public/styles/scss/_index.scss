@@ -8,7 +8,7 @@
     user-drag: none;
 
     &__zoom {
-        transition: all 0.2s ease-in !important;
+        transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
         width: 220vh !important;
         height: 220vh !important;
 
@@ -65,6 +65,7 @@
             height: 101%;
             top: -.5%;
             left: -.5%;
+            position: absolute;
 
             &:hover {
                 box-shadow: inset 0px 0px 1px 10px black;

@@ -21,7 +21,7 @@ if (true) { // this causes unused variables to be highlighted
         welcomePane.classList.toggle("welcome__zoom");
         setTimeout(function () {
             window.location.href = followUpPage;
-        }, 200);
+        }, 400);
     }
 
     infoLog("windowWidth: " + windowWidth / 2);

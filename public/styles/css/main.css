@@ -177,7 +177,7 @@ body {
   user-drag: none;
 }
 .welcome__zoom {
-  transition: all 0.2s ease-in !important;
+  transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
   width: 220vh !important;
   height: 220vh !important;
 }
@@ -224,6 +224,7 @@ body {
   height: 101%;
   top: -0.5%;
   left: -0.5%;
+  position: absolute;
 }
 .welcome__pane__border-element:hover {
   box-shadow: inset 0px 0px 1px 10px black;
