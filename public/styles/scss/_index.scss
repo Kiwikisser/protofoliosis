@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    user-drag: none;
+    -webkit-user-drag: none;
 
     &__zoom {
         transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
@@ -95,12 +95,12 @@
 
             & h1 {
                 margin-bottom: variables.$default_y_gap;
-                font-size: 5rem;
+                font-size: max(4vw, 4vh);
             }
 
             & p {
                 margin-bottom: variables.$default_y_gap;
-                font-size: 1rem;
+                font-size: max(1vw, 1vh);
             }
         }
     }

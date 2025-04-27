@@ -174,7 +174,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  user-drag: none;
+  -webkit-user-drag: none;
 }
 .welcome__zoom {
   transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
@@ -249,11 +249,11 @@ body {
 }
 .welcome__reception__content h1 {
   margin-bottom: 20px;
-  font-size: 5rem;
+  font-size: max(4vw, 4vh);
 }
 .welcome__reception__content p {
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: max(1vw, 1vh);
 }
 
 .work-main {
