@@ -16,10 +16,6 @@
   animation: pulse 2s infinite;
 }
 
-.pulse:hover {
-  animation: none;
-}
-
 @keyframes pulse {
   0% {
     -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.65);
@@ -48,7 +44,7 @@ body {
   background-color: #f3f3f3;
   overflow-x: hidden;
   font-size: 62.5%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .clearfix:after, .navbar__list:after {
@@ -258,6 +254,9 @@ body {
   font-size: max(1vw, 1vh);
 }
 
+.work-main {
+  padding-top: 20vh;
+}
 .work__pair {
   background-color: black;
   width: 80vw;
@@ -646,12 +645,67 @@ body {
     right: -20%;
   }
 }
+.experience-main {
+  width: 1300px;
+  margin: 0 auto;
+}
+.experience-container {
+  width: 100%;
+  height: 100%;
+}
+.experience__row {
+  display: flex;
+  margin-bottom: 35px;
+}
+.experience__row__item {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 111px;
+}
+.experience__row__item__square {
+  width: 75%;
+  height: 75%;
+  background-color: black;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.experience__row__item__square:hover {
+  transform: scale(1.05);
+}
+.experience__row__item__square__content {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.experience__row__item__square__content img {
+  width: 75%;
+  height: 75%;
+  object-fit: cover;
+}
+.experience__row__item__square__content h3 {
+  display: none;
+}
+.experience__row.even {
+  flex-direction: row;
+}
+.experience__row.uneven {
+  flex-direction: row-reverse;
+}
+
 .page-header {
   margin-top: 30vh;
 }
 .page-header__title {
   font-size: 8vw;
-  margin: 0 8% 70vh 8%;
+  margin: 0 8% 50vh 8%;
   font-family: "Orbitron", sans-serif;
   color: #4a0000;
 }
