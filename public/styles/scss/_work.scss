@@ -1,143 +1,155 @@
 @use 'variables';
 
-.work{
-  &__pair{
-    background-color: black;
-    width: 80vw;
-    height: 40vw;
-    margin: 0 auto;
-    transform: rotate(-45deg);
-    position: relative;
-    z-index: 5;
-    box-shadow: 0px 0px 3px 1px #000000;
-
-    &.non-first{
-      left: -0.25%;
-      margin-top: 15.8%;
-      z-index: 3;
+.work {
+    &-main {
+        padding-top: 20vh;
     }
 
-    &-thumb.ipmedt2, &-thumb.iipmedt, &-thumb.ipmedt3, &-thumb.iclock_air{
-      width: 48.5%;
-      height: 96%;
-      display: block;
-      position: absolute;
-      overflow: hidden;
-      margin: 1%;
-      transition: .4s;
+    &__pair {
+        background-color: black;
+        width: 80vw;
+        height: 40vw;
+        margin: 0 auto;
+        transform: rotate(-45deg);
+        position: relative;
+        z-index: 5;
+        box-shadow: 0px 0px 3px 1px #000000;
 
-      &.first-item{
-        right: 0;
-      }
-
-      &:hover{
-        transform: scale(1.05) rotate(45deg);
-        filter: blur(3px);
-        z-index: 10;
-        cursor: pointer;
-        outline: 15px solid #efefef;
-
-        &:before{
-          transform: rotate(0deg);
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
+        &.non-first {
+            left: -0.25%;
+            margin-top: 15.8%;
+            z-index: 3;
         }
-      }
-    }
 
-    &-thumb.ipmedt2:before{
-      background: url(../../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -25%;
-      left: -25%;
-      z-index: -1;
-      background-size: cover;
-      transition: .4s;
-      transform: rotate(45deg);
-    }
+        &-thumb.ipmedt2,
+        &-thumb.iipmedt,
+        &-thumb.ipmedt3,
+        &-thumb.iclock_air {
+            width: 48.5%;
+            height: 96%;
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            margin: 1%;
+            transition: .4s;
 
-    &-thumb.iipmedt:before{
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -25%;
-      left: -25%;
-      z-index: -1;
-      background: url(../../media/workThumbnails/iipmedt_1.jpeg) 0 0 no-repeat;
-      background-size: cover;
-      transition: .4s;
-      transform: rotate(45deg);
-    }
+            &.first-item {
+                right: 0;
+            }
 
-    &-thumb.ipmedt3:before{
-      background: url(../../media/workThumbnails/ipmedt3.png) 0 0 no-repeat;
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -25%;
-      left: -25%;
-      z-index: -1;
-      background-size: cover;
-      transition: .4s;
-      transform: rotate(45deg);
-    }
+            &:hover {
+                transform: scale(1.05) rotate(45deg);
+                filter: blur(3px);
+                z-index: 10;
+                cursor: pointer;
+                outline: 15px solid #efefef;
 
-    &-thumb.iclock_air:before{
-      background: url(../../media/workThumbnails/iclock_air.jpeg) 0 0 no-repeat;
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 150%;
-      top: -25%;
-      left: -25%;
-      z-index: -1;
-      background-size: cover;
-      transition: .4s;
-      transform: rotate(45deg);
-    }
-
-    &__clickbait{
-      position: absolute;
-      transform: rotate(45deg);
-      top: 37%;
-      background-color: rgba(255, 255, 255, 0.75);
-      z-index: 50;
-      opacity: 0;
-      display: table;
-      transition: .4s;
-      pointer-events: none;
-      height: 25%;
-      width: 40%;
-      font-size: 2rem;
-
-      & h3{
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-      }
-
-      &.cb1,&.cb3{
-        right: 5%;
-        @extend .work__pair__clickbait;
-      }
-
-      &.cb2,&.cb4{
-        left: 5%;
-        @extend .work__pair__clickbait;
-      }
-
-      &.cb1,&.cb2,&.cb3,&.cb4{
-        &.show{
-          opacity: 1;
+                &:before {
+                    transform: rotate(0deg);
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
         }
-      }
+
+        &-thumb.ipmedt2:before {
+            background: url(../../media/workThumbnails/ipmedt2.png) 0 0 no-repeat;
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            z-index: -1;
+            background-size: cover;
+            transition: .4s;
+            transform: rotate(45deg);
+        }
+
+        &-thumb.iipmedt:before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            z-index: -1;
+            background: url(../../media/workThumbnails/iipmedt_1.jpeg) 0 0 no-repeat;
+            background-size: cover;
+            transition: .4s;
+            transform: rotate(45deg);
+        }
+
+        &-thumb.ipmedt3:before {
+            background: url(../../media/workThumbnails/ipmedt3.png) 0 0 no-repeat;
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            z-index: -1;
+            background-size: cover;
+            transition: .4s;
+            transform: rotate(45deg);
+        }
+
+        &-thumb.iclock_air:before {
+            background: url(../../media/workThumbnails/iclock_air.jpeg) 0 0 no-repeat;
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            z-index: -1;
+            background-size: cover;
+            transition: .4s;
+            transform: rotate(45deg);
+        }
+
+        &__clickbait {
+            position: absolute;
+            transform: rotate(45deg);
+            top: 37%;
+            background-color: rgba(255, 255, 255, 0.75);
+            z-index: 50;
+            opacity: 0;
+            display: table;
+            transition: .4s;
+            pointer-events: none;
+            height: 25%;
+            width: 40%;
+            font-size: 2rem;
+
+            & h3 {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            &.cb1,
+            &.cb3 {
+                right: 5%;
+                @extend .work__pair__clickbait;
+            }
+
+            &.cb2,
+            &.cb4 {
+                left: 5%;
+                @extend .work__pair__clickbait;
+            }
+
+            &.cb1,
+            &.cb2,
+            &.cb3,
+            &.cb4 {
+                &.show {
+                    opacity: 1;
+                }
+            }
+        }
     }
-  }
 }
