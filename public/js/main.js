@@ -5,7 +5,7 @@
  */
 
 const infoLogging = true;
-infoLog("loaded main.js file");
+logInfo("loaded main.js file");
 
 const windowHeight = $(window).height();
 const windowWidth = $(window).width();
@@ -15,50 +15,55 @@ window.onload = function () {
 
     console.log($(window).height());
     console.log($(window).width());
-    // 1903 969
 
-    // navigation menu
     if ($("body").data("page") !== "index") {
-        const firstBar = document.getElementById("js--firstBar");
-        const secondBar = document.getElementById("js--secondBar");
-        const thirdBar = document.getElementById("js--thirdBar");
-        const barContainer = document.getElementById("js--barContainer");
-        const barContainerBg = document.getElementById("js--barContainerBg");
-        const navbarList = document.getElementById('js--navbar-list');
-        const navbarWork = document.getElementById('js--navbar-work');
-        const navbarProfile = document.getElementById('js--navbar-profile');
+        directNavigationMenu();
+    }
+}
 
-        let menuBool = false;
+function directNavigationMenu(){
+    const firstBar = document.getElementById("js--firstBar");
+    const secondBar = document.getElementById("js--secondBar");
+    const thirdBar = document.getElementById("js--thirdBar");
+    const barContainer = document.getElementById("js--barContainer");
+    const barContainerBg = document.getElementById("js--barContainerBg");
+    const navbarList = document.getElementById('js--navbar-list');
+    
+    const navbarWork = document.getElementById('js--navbar-work');
+    const navbarProfile = document.getElementById('js--navbar-profile');
+    const navbarExperience = document.getElementById('js--navbar-experience');
 
-        barContainer.onmousedown = function () {
-            firstBar.classList.toggle("change");
-            secondBar.classList.toggle("change");
-            thirdBar.classList.toggle("change");
-            let timeoutTime;
+    let menuOpen = false;
 
-            if (menuBool === false) {
-                timeoutTime = 100;
-                menuBool = !menuBool;
-            } else {
-                timeoutTime = 40;
-                menuBool = !menuBool;
-            }
+    barContainer.onmousedown = function () {
+        firstBar.classList.toggle("change");
+        secondBar.classList.toggle("change");
+        thirdBar.classList.toggle("change");
 
-            barContainerBg.classList.toggle("change");
+        barContainerBg.classList.toggle("change");
 
-            navbarList.classList.toggle("menu-roll");
+        navbarList.classList.toggle("menu-roll");
 
+        if (menuOpen){
+            navbarWork.classList.toggle("menu-roll");
+            navbarProfile.classList.toggle("menu-roll");
+            navbarExperience.classList.toggle("menu-roll");
+        } else {
             setTimeout(function () {
                 navbarWork.classList.toggle("menu-roll");
                 setTimeout(function () {
                     navbarProfile.classList.toggle("menu-roll");
-                }, timeoutTime);
-            }, timeoutTime);
+                    setTimeout(function () {
+                        navbarExperience.classList.toggle("menu-roll");
+                    }, 100);
+                }, 100);
+            }, 100);
         }
+        menuOpen = !menuOpen;
     }
 }
 
-function infoLog(message) {
+function logInfo(message) {
     if (!infoLogging)
         return;
     console.log("INFO: " + message);
@@ -76,7 +81,7 @@ function loadPageScripts(){
             loadScript('./js/me.js');
             break;
         default:
-            infoLog("no page found");
+            logInfo("no page found");
     }
 }
 
@@ -91,6 +96,6 @@ function loadScript(url) {
 function logViewportDimensions(){
     const viewPortWidth = document.documentElement.clientWidth;
     const viewPortHeight = document.documentElement.clientHeight;
-    infoLog("Viewport width: " + viewPortWidth + "px");
-    infoLog("Viewport height: " + viewPortHeight + "px");
+    logInfo("Viewport width: " + viewPortWidth + "px");
+    logInfo("Viewport height: " + viewPortHeight + "px");
 }

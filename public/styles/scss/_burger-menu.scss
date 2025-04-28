@@ -8,6 +8,7 @@
   padding: 10px;
   z-index: 2;
   position: absolute;
+  cursor: pointer;
 
   &:hover{
     border: none;
@@ -17,7 +18,7 @@
     background-color: black;
     height: 60px;
     width: 60px;
-    transition: 0.4s;
+    transition: all 0.4s;
     position: absolute;
     margin-top: 1px;
     margin-left: 73px;

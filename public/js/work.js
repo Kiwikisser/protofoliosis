@@ -3,7 +3,7 @@
  * @description JS file included in work.html.
  * @author Amos Peperkamp
  */
-infoLog("loaded work.js file");
+logInfo("loaded work.js file");
 
 if (true) { // this causes unused variables to be highlighted
     let workProjectHovered = document.getElementsByClassName('work__pair-thumb')[0];

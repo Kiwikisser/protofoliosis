@@ -1,79 +1,76 @@
 @use 'variables';
-.clearfix{
-  &:after{
-    content: "";
-    display: table;
-    clear: both;
-  }
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
-.navbar{
-  // width: 25%;
-  height: 10vh;
-  margin-top: variables.$default_y_gap*2;
-  position: fixed;
-  top: 0; 
-  z-index: 100;
+.navbar {
+    height: 10vh;
+    margin-top: variables.$default_y_gap*2;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 
-  &-work.menu-roll,&-profile.menu-roll{
-    display: inline-block;
-  }
+    &__list {
+        width: 0%;
+        transition: 0.4s;
+        background-color: white;
+        margin-left: 100px;
+        z-index: 0;
+        background: linear-gradient(225deg, transparent 23px, #fff 0) top right, linear-gradient(315deg, transparent 23px, #fbfbfb 0) bottom right;
+        background-size: 100% 51%;
+        background-repeat: no-repeat;
+        @extend .clearfix;
 
-  &-work:hover,&-profile:hover{
-    box-shadow: inset 0px -5px 0px 0px variables.$primary_colour;
-  }
+        &.menu-roll{
+            width: 100%;
+            max-height: 65px;
+        }
 
-  &__list{
-    width: 0%;
-    transition: 0.4s;
-    background-color: white;
-    margin-left: 100px;
-    z-index: 0;
-    background: linear-gradient(225deg, transparent 23px, #fff 0) top right, linear-gradient(315deg, transparent 23px, #fbfbfb 0) bottom right;
-    background-size: 100% 51%;
-    background-repeat: no-repeat;
-    @extend .clearfix;
+        &__link {
+            color: black;
+            display: none;
+            float: left;
+            margin-left: variables.$default_x_gap*3;
+            margin-top: 15px;
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            cursor: pointer;
+            min-width: 70px;
+            text-align: center;
+            line-height: 2.5rem;
 
-    &__item{
-      color: black;
-      display: none;
-      float: left;
-      margin-left: variables.$default_x_gap*3;
-      margin-top: 15px;
-      font-size: 1.5rem;
-      padding-bottom: 10px;
-      cursor: pointer;
-      min-width: 70px;
-      text-align: center;
-      line-height: 2.5rem;
+            &.menu-roll {
+                display: inline-block;
+            }
 
-      & a{
-        color: inherit;
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
+            &:hover {
+                box-shadow: inset 0px -5px 0px 0px variables.$primary_colour;
+            }
 
-      &.active{
-        box-shadow: inset 0px -5px 0px 0px black;
-      }
+            & a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
 
-      &:hover{
-      }
+            &.active {
+                box-shadow: inset 0px -5px 0px 0px black;
+            }
+        }
+
+        &__item--right { // ?
+            @extend .navbar__list__item;
+            float: right;
+        }
+
     }
-
-    &__item--right{
-      @extend .navbar__list__item;
-      float: right;
-    }
-
-  }
-
-  &__list.menu-roll{
-    width: 100%;
-    max-height: 65px;
-  }
 }
 
 // @media (max-width: 1281px ){
@@ -82,17 +79,17 @@
 //   }
 // }
 
-@media (max-width: variables.$phone_width ){
-  .navbar{
-    height: unset;
+@media (max-width: variables.$phone_width ) {
+    .navbar {
+        height: unset;
 
-    &__list{
-      margin-left: 50px;
-      padding-left: 27px;
+        &__list {
+            margin-left: 50px;
+            padding-left: 27px;
 
-      &__item{
-        margin-left: 30px;
-      }
+            &__item {
+                margin-left: 30px;
+            }
+        }
     }
-  }
 }
