@@ -1,17 +1,6 @@
 @use 'variables';
 
 .me{
-  &__header{
-    margin-top: 200px;
-
-    &__title{
-      font-size: 9rem;
-      margin: 0 8%;
-      font-family: 'Orbitron', sans-serif;
-      color: variables.$primary_colour;
-    } 
-  }
-
   &-main{
     // background-color: crimson;
     width: 60%;

@@ -1,21 +1,6 @@
 @use 'variables';
 
 .work{
-
-  &-main{
-    margin-top: 200px;
-  }
-
-  &__header{
-
-    &__title{
-      font-size: 8vw;
-      margin: 0 8% 70vh 8%;
-      font-family: 'Orbitron', sans-serif;
-      color: variables.$primary_colour;
-    }
-  }
-
   &__pair{
     background-color: black;
     width: 80vw;

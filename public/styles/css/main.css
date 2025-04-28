@@ -257,15 +257,6 @@ body {
   font-size: max(1vw, 1vh);
 }
 
-.work-main {
-  margin-top: 200px;
-}
-.work__header__title {
-  font-size: 8vw;
-  margin: 0 8% 70vh 8%;
-  font-family: "Orbitron", sans-serif;
-  color: #4a0000;
-}
 .work__pair {
   background-color: black;
   width: 80vw;
@@ -388,15 +379,6 @@ body {
   opacity: 1;
 }
 
-.me__header {
-  margin-top: 200px;
-}
-.me__header__title {
-  font-size: 9rem;
-  margin: 0 8%;
-  font-family: "Orbitron", sans-serif;
-  color: #4a0000;
-}
 .me-main {
   width: 60%;
   margin: 3% auto 0 auto;
@@ -662,6 +644,15 @@ body {
     bottom: unset;
     right: -20%;
   }
+}
+.page-header {
+  margin-top: 30vh;
+}
+.page-header__title {
+  font-size: 8vw;
+  margin: 0 8% 70vh 8%;
+  font-family: "Orbitron", sans-serif;
+  color: #4a0000;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,6 +7,17 @@
 @use 'work';
 @use 'me';
 
+.page-header{
+    margin-top: 30vh;
+    
+    &__title{
+        font-size: 8vw;
+        margin: 0 8% 70vh 8%;
+        font-family: 'Orbitron', sans-serif;
+        color: variables.$primary_colour;
+      }
+}
+
 @media (max-width: variables.$hidpi_width ) and (min-width: variables.$tablet_width) {
 
 }
