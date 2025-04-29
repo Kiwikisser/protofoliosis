@@ -6,6 +6,12 @@
         margin: 0 auto 20vh auto;
     }
     
+    &-header{
+        & .page-header__title{
+            margin: 0 8% 30vh 8%;
+        }
+    }
+    
     &-container{
         width: 100%;
         height: 100%;

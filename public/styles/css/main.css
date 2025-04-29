@@ -55,6 +55,16 @@ body {
   min-height: 100vh;
 }
 
+.page-header {
+  margin-top: 30vh;
+}
+.page-header__title {
+  font-size: 8vw;
+  margin: 0 8% 40vh 8%;
+  font-family: "Orbitron", sans-serif;
+  color: black;
+}
+
 .clearfix:after, .navbar__list:after {
   content: "";
   display: table;
@@ -657,6 +667,9 @@ body {
   width: 1300px;
   margin: 0 auto 20vh auto;
 }
+.experience-header .page-header__title {
+  margin: 0 8% 30vh 8%;
+}
 .experience-container {
   width: 100%;
   height: 100%;
@@ -731,16 +744,6 @@ body {
 }
 .experience__row.uneven {
   flex-direction: row-reverse;
-}
-
-.page-header {
-  margin-top: 30vh;
-}
-.page-header__title {
-  font-size: 8vw;
-  margin: 0 8% 40vh 8%;
-  font-family: "Orbitron", sans-serif;
-  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
