@@ -718,8 +718,13 @@ body {
   height: 75%;
   object-fit: cover;
 }
-.experience__row__item__square__content h3 {
+.experience__row__item__square__content-title {
   display: none;
+}
+.experience__row__item__square__content-toggle {
+  color: #f3f3f3;
+  font-size: 1rem;
+  user-select: none;
 }
 .experience__row.even {
   flex-direction: row;
@@ -733,7 +738,7 @@ body {
 }
 .page-header__title {
   font-size: 8vw;
-  margin: 0 8% 50vh 8%;
+  margin: 0 8% 40vh 8%;
   font-family: "Orbitron", sans-serif;
   color: black;
 }
