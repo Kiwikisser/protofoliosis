@@ -694,6 +694,7 @@ body {
   transform: rotate(45deg);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  user-select: none;
 }
 .experience__row__item__square:hover {
   transform: scale(1.05);
@@ -712,6 +713,9 @@ body {
   font-size: 2rem;
   display: block;
   position: absolute;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1px 5px;
+  border-radius: 1px;
 }
 .experience__row__item__square.open:hover {
   transform: scale(1) rotate(45deg);
@@ -726,10 +730,13 @@ body {
   flex-direction: column;
   position: relative;
 }
-.experience__row__item__square__content img {
+.experience__row__item__square__content-image {
   width: 75%;
   height: 75%;
-  object-fit: cover;
+  object-fit: contain;
+}
+.experience__row__item__square__content-image.github-logo {
+  border-radius: 50%;
 }
 .experience__row__item__square__content-title {
   display: none;

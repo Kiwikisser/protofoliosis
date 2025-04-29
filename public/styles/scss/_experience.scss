@@ -37,6 +37,7 @@
                 transform: rotate(45deg);
                 cursor: pointer;
                 transition: all .2s ease-in-out;
+                user-select: none;
 
                 &:hover{
                     transform: scale(1.05);
@@ -59,6 +60,9 @@
                         font-size: 2rem;
                         display: block;
                         position: absolute;
+                        background: rgba(255, 255, 255, 65%);
+                        padding: 1px 5px;
+                        border-radius: 1px;
                     }
 
                     &:hover{
@@ -76,10 +80,14 @@
                     flex-direction: column;
                     position: relative;
 
-                    & img{
+                    &-image{
                         width: 75%;
                         height: 75%;
-                        object-fit: cover;
+                        object-fit: contain;
+
+                        &.github-logo{
+                            border-radius: 50%;
+                        }
                     }
 
                     &-title {
