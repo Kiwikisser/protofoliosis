@@ -26,3 +26,11 @@ $default_x_gap: 30px;
         padding-bottom: 100%;
     }
 }
+
+.small-boxshadow{
+    box-shadow: 0px 0px 1px 1px #000000;
+}
+
+.default-boxshadow{
+    box-shadow: 0px 0px 3px 1px #000000;
+}

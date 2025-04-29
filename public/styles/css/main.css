@@ -10,6 +10,14 @@
   padding-bottom: 100%;
 }
 
+.small-boxshadow, .experience__row__item__square.open {
+  box-shadow: 0px 0px 1px 1px #000000;
+}
+
+.default-boxshadow {
+  box-shadow: 0px 0px 3px 1px #000000;
+}
+
 .pulse {
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
