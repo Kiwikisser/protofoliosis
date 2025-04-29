@@ -22,6 +22,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 111px;
+            position: relative;
 
             &__square{
                 width: 75%;
@@ -35,6 +36,28 @@
                     transform: scale(1.05);
                 }
 
+                &.open{
+                    background-color: variables.$base_colour;
+                    width: 150%;
+                    height: 150%;
+                    border: 8px solid variables.$primary_colour;
+                    position: absolute;
+
+                    & img {
+                        opacity: 50%;
+                    }
+
+                    & h3{
+                        font-size: 2rem;
+                        display: block;
+                        position: absolute;
+                    }
+
+                    &:hover{
+                        transform: scale(1) rotate(45deg);
+                    }
+                }
+
                 &__content{
                     width: 100%;
                     height: 100%;
@@ -43,6 +66,7 @@
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
+                    position: relative;
 
                     & img{
                         width: 75%;

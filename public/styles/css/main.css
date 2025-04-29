@@ -91,7 +91,7 @@ body {
   display: inline-block;
 }
 .navbar__list__link:hover {
-  box-shadow: inset 0px -5px 0px 0px #4a0000;
+  box-shadow: inset 0px -5px 0px 0px black;
 }
 .navbar__list__link a {
   color: inherit;
@@ -420,7 +420,7 @@ body {
   text-align: center;
   margin-left: 37%;
   margin-bottom: 10%;
-  color: #4a0000;
+  color: black;
 }
 .me__container__slides-info p {
   font-size: 1.2rem;
@@ -499,7 +499,7 @@ body {
   font-size: 8rem;
   margin: 0 8% 15% 8%;
   font-family: "Orbitron", sans-serif;
-  color: #4a0000;
+  color: black;
 }
 .experience-item {
   width: 100%;
@@ -664,6 +664,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 111px;
+  position: relative;
 }
 .experience__row__item__square {
   width: 75%;
@@ -676,6 +677,24 @@ body {
 .experience__row__item__square:hover {
   transform: scale(1.05);
 }
+.experience__row__item__square.open {
+  background-color: #f3f3f3;
+  width: 150%;
+  height: 150%;
+  border: 8px solid black;
+  position: absolute;
+}
+.experience__row__item__square.open img {
+  opacity: 50%;
+}
+.experience__row__item__square.open h3 {
+  font-size: 2rem;
+  display: block;
+  position: absolute;
+}
+.experience__row__item__square.open:hover {
+  transform: scale(1) rotate(45deg);
+}
 .experience__row__item__square__content {
   width: 100%;
   height: 100%;
@@ -684,6 +703,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .experience__row__item__square__content img {
   width: 75%;
@@ -707,7 +727,7 @@ body {
   font-size: 8vw;
   margin: 0 8% 50vh 8%;
   font-family: "Orbitron", sans-serif;
-  color: #4a0000;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

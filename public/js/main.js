@@ -66,7 +66,7 @@ function directNavigationMenu(){
 function logInfo(message) {
     if (!infoLogging)
         return;
-    console.log("INFO: " + message);
+    console.log(message);
 }
 
 function loadPageScripts(){
@@ -79,6 +79,9 @@ function loadPageScripts(){
             break;
         case "me":
             loadScript('./js/me.js');
+            break;
+        case "experience":
+            loadScript('./js/experience.js');
             break;
         default:
             logInfo("no page found");
