@@ -1,202 +1,178 @@
 @use 'variables';
 
-.me{
-  &-main{
-    // background-color: crimson;
-    width: 60%;
-    margin: 3% auto 0 auto;
-    transform: rotate(-45deg);
-    position: relative;
-    z-index: 5;
+.me {
 
-    &:after{
-      content: "";
-      display: block;
-      padding-bottom: 20%;
-    }
-  }
+    &-main {
+        width: 60%;
+        margin: 3% auto 0 auto;
+        transform: rotate(-45deg);
+        position: relative;
+        z-index: 5;
 
-  &__container{
-    width: 80%;
-    background-color: white;
-    box-shadow: inset 0px 0px 1px 20px black;
-
-    &:after{
-      content: "";
-      display: block;
-      padding-bottom: 100%;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 20%;
+        }
     }
 
-    &__slides{
-      transform: rotate(45deg);
-      position: absolute;
-      top: -5%;
-      left: -5%;
-      width: 90%;
-      height: 90%;
+    &__container {
+        width: 80%;
+        background-color: white;
+        box-shadow: inset 0px 0px 1px 20px black;
 
-      &-info{
-        margin-top: 10%;
-        margin-left: 18%;
-        width: 50%;
-
-        &__title{
-          font-size: 5rem;
-          max-width: 60%;
-          text-align: center;
-          margin-left: 37%;
-          margin-bottom: 10%;
-          color: variables.$primary_colour;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
         }
 
-        & p{
-          font-size: 1.2rem;
-          margin-bottom: 20px;
+        &__slides {
+            transform: rotate(45deg);
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 90%;
+            height: 90%;
+
+            &-info {
+                margin-top: 10%;
+                margin-left: 18%;
+                width: 50%;
+
+                &__title {
+                    font-size: 5rem;
+                    max-width: 60%;
+                    text-align: center;
+                    margin-left: 37%;
+                    margin-bottom: 10%;
+                    color: variables.$primary_colour;
+                }
+
+                & p {
+                    font-size: 1.2rem;
+                    margin-bottom: 20px;
+                }
+            }
         }
-      }
-    }
-  }
-
-  &__pictures{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 40%;
-    // background-color: purple;
-
-    &:after{
-      content: "";
-      display: block;
-      padding-bottom: 100%;
     }
 
-    &__image{
-      width: 100%;
-      height: 100%;
-      // object-fit: cover;
-      // object-position: 50% 50%;
-      display: block;
-      position: absolute;
-      overflow: hidden;
-      transition: .4s;
-      box-shadow: 0px 0px 8px 1px #292929;
-
-      &.yaboi1:before{
-        content: "";
+    &__pictures {
         position: absolute;
-        width: 150%;
-        height: 150%;
-        top: -25%;
-        left: -25%;
-        background: url(../../media/sittin.jpg) 0 0 no-repeat;
-        background-size: cover;
-        transition: .4s;
-        transform: rotate(45deg);
-      }
+        bottom: 0;
+        right: 0;
+        width: 40%;
 
-      &.yaboi2:before{
-        content: "";
-        position: absolute;
-        width: 150%;
-        height: 150%;
-        top: -25%;
-        left: -25%;
-        background: url(../../media/yaboi.jpg) 0 0 no-repeat;
-        background-size: cover;
-        transition: .4s;
-        transform: rotate(45deg);
-      }
-
-      &.yaboi3:before{
-        content: "";
-        position: absolute;
-        width: 150%;
-        height: 150%;
-        top: -25%;
-        left: -25%;
-        background: url(../../media/mosterd.JPG) 0 0 no-repeat;
-        background-size: cover;
-        transition: .4s;
-        transform: rotate(45deg);
-      }
-
-      &:hover{
-        transform: scale(1.05);
-        // filter: blur(3px);
-        z-index: 10;
-        cursor: pointer;
-        // outline: 15px solid #efefef;
-        // box-shadow: inset 0px 0px 1px 10px black;
-
-        &:before{
-          // transform: rotate(-45deg);
-          // height: 100%;
-          // width: 100%;
-          // top: 0;
-          // left: 0;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
         }
-      }
 
-      &:active{
-        transform: scale(0.91);
+        &__image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            transition: .4s;
+            box-shadow: 0px 0px 8px 1px #292929;
 
-        // &:hover{
-        //   transform: rotate(180deg) scale(1.05);
-        //   z-index: 10;
-        //   cursor: pointer;
-        // }
-        //
-        // &:before{
-        //   // transform: rotate(225deg);
-        // }
-      }
+            &.yaboi1:before {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 150%;
+                top: -25%;
+                left: -25%;
+                background: url(../../media/sittin.jpg) 0 0 no-repeat;
+                background-size: cover;
+                transition: .4s;
+                transform: rotate(45deg);
+            }
+
+            &.yaboi2:before {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 150%;
+                top: -25%;
+                left: -25%;
+                background: url(../../media/yaboi.jpg) 0 0 no-repeat;
+                background-size: cover;
+                transition: .4s;
+                transform: rotate(45deg);
+            }
+
+            &.yaboi3:before {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 150%;
+                top: -25%;
+                left: -25%;
+                background: url(../../media/mosterd.JPG) 0 0 no-repeat;
+                background-size: cover;
+                transition: .4s;
+                transform: rotate(45deg);
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(0.91);
+            }
+        }
     }
-  }
 }
 
 
 
 // landscape smaller than HiDPI
-@media (max-width: 1441px ) and (min-width: 801px) {
-  .me__container__slides-info{
-    width: 55%;
+@media (max-width: 1441px) and (min-width: 801px) {
+    .me__container__slides-info {
+        width: 55%;
 
-    &__title{
-      font-size: 3rem;
-    }
+        &__title {
+            font-size: 3rem;
+        }
 
-    &>p{
-      font-size: 1rem;
+        &>p {
+            font-size: 1rem;
+        }
     }
-  }
 }
 
 
 // portrait smaller than pixel 2XL
-@media (max-width: 420px){
-  .me{
-    &-main{
-      width: 100%;
-      margin-top: 260px;
+@media (max-width: 420px) {
+    .me {
+        &-main {
+            width: 100%;
+            margin-top: 260px;
 
-      &:after{
-        padding-bottom: 0;
-      }
-    }
+            &:after {
+                padding-bottom: 0;
+            }
+        }
 
-    &__header{
-      margin-top: 120px;
-    }
+        &__header {
+            margin-top: 120px;
+        }
 
-    &__container{
-      width: unset;
-      bottom: 0;
-    }
+        &__container {
+            width: unset;
+            bottom: 0;
+        }
 
-    &__pictures{
-      top: -20%;
-      bottom: unset;
-      right: -20%;
+        &__pictures {
+            top: -20%;
+            bottom: unset;
+            right: -20%;
+        }
     }
-  }
 }
