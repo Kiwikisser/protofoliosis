@@ -395,6 +395,18 @@ body {
   opacity: 1;
 }
 
+.me-preload-image-1 {
+  display: none;
+  background-image: url(../../media/sittin.jpg);
+}
+.me-preload-image-2 {
+  display: none;
+  background-image: url(../../media/yaboi.jpg);
+}
+.me-preload-image-3 {
+  display: none;
+  background-image: url(../../media/mosterd.JPG);
+}
 .me-main {
   width: 60%;
   margin: 3% auto 0 auto;

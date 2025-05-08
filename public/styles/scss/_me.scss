@@ -2,6 +2,21 @@
 
 .me {
 
+    &-preload-image-1{
+        display:none;
+        background-image: url(../../media/sittin.jpg);
+    }
+
+    &-preload-image-2{
+        display:none;
+        background-image: url(../../media/yaboi.jpg);
+    }
+
+    &-preload-image-3{
+        display:none;
+        background-image: url(../../media/mosterd.JPG);
+    }
+
     &-main {
         width: 60%;
         margin: 3% auto 0 auto;
