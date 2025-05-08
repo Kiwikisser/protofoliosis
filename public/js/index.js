@@ -3,7 +3,7 @@
  * @description JS file included in index.html. 
  * @author Amos Peperkamp
  */
-infoLog("loaded index.js file");
+logInfo("loaded index.js file");
 
 if (true) { // this causes unused variables to be highlighted
     const welcomePane = document.getElementById('js--welcome-pane');
@@ -24,8 +24,8 @@ if (true) { // this causes unused variables to be highlighted
         }, 400);
     }
 
-    infoLog("windowWidth: " + windowWidth / 2);
-    infoLog("windowHeight: " + windowHeight / 2);
+    logInfo("windowWidth: " + windowWidth / 2);
+    logInfo("windowHeight: " + windowHeight / 2);
 
     detectMouse = (e) => {
         let offsetX = windowWidth / 2;
