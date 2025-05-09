@@ -4,7 +4,7 @@
   clear: both;
 }
 
-.make-square:after {
+.make-square:after, .me__container__content:after, .me__container__content__pictures__container:after {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -18,7 +18,7 @@
   box-shadow: 0px 0px 3px 1px #000000;
 }
 
-.pulse {
+.pulse, .me__container__content__pictures__container__image {
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
   animation: pulse 2s infinite;
@@ -65,6 +65,12 @@ body {
   color: black;
 }
 
+@media (max-width: 430px) {
+  .page-header__title {
+    font-size: 20vh;
+    margin: 0 5% 40vh 5%;
+  }
+}
 .clearfix:after, .navbar__list:after {
   content: "";
   display: table;
@@ -123,7 +129,7 @@ body {
   float: right;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .navbar {
     height: unset;
   }
@@ -174,7 +180,7 @@ body {
 .bar-container__bar--1.change, .bar-container__bar--2.change, .bar-container__bar--3.change {
   background-color: black;
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .bar-container {
     margin-left: -52px;
   }
@@ -395,6 +401,17 @@ body {
   opacity: 1;
 }
 
+.me-picture, .me__container__content__pictures__container__image.yaboi3:before, .me__container__content__pictures__container__image.yaboi2:before, .me__container__content__pictures__container__image.yaboi1:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background-size: cover !important;
+  transition: 0.4s;
+  transform: rotate(-45deg);
+}
 .me-preload-image-1 {
   display: none;
   background-image: url(../../media/sittin.jpg);
@@ -410,145 +427,88 @@ body {
 .me-main {
   width: 60%;
   margin: 3% auto 0 auto;
-  transform: rotate(-45deg);
   position: relative;
   z-index: 5;
 }
-.me-main:after {
-  content: "";
-  display: block;
-  padding-bottom: 20%;
-}
 .me__container {
   width: 80%;
+}
+.me__container__content {
   background-color: white;
   box-shadow: inset 0px 0px 1px 20px black;
-}
-.me__container:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-.me__container__slides {
   transform: rotate(45deg);
+  position: relative;
+}
+.me__container__content-info {
   position: absolute;
-  top: -5%;
-  left: -5%;
-  width: 90%;
-  height: 90%;
-}
-.me__container__slides-info {
-  margin-top: 10%;
-  margin-left: 18%;
+  transform: rotate(-45deg);
   width: 50%;
+  margin: 2% 23%;
 }
-.me__container__slides-info__title {
-  font-size: 5rem;
-  max-width: 60%;
+.me__container__content-info__title {
+  font-size: 5vw;
   text-align: center;
-  margin-left: 37%;
-  margin-bottom: 10%;
+  margin: 0 auto 10% auto;
   color: black;
 }
-.me__container__slides-info p {
-  font-size: 1.2rem;
+.me__container__content-info p {
+  font-size: 1.2vw;
   margin-bottom: 20px;
 }
-.me__pictures {
+.me__container__content__pictures {
   position: absolute;
-  bottom: 0;
-  right: 0;
   width: 40%;
+  right: 0;
 }
-.me__pictures:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.me__container__content__pictures__container {
+  position: relative;
 }
-.me__pictures__image {
+.me__container__content__pictures__container__image {
   width: 100%;
   height: 100%;
+  top: -50%;
+  right: -50%;
   display: block;
   position: absolute;
   overflow: hidden;
   transition: 0.4s;
-  box-shadow: 0px 0px 8px 1px #292929;
 }
-.me__pictures__image.yaboi1:before {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
+.me__container__content__pictures__container__image.yaboi1:before {
   background: url(../../media/sittin.jpg) 0 0 no-repeat;
-  background-size: cover;
-  transition: 0.4s;
-  transform: rotate(45deg);
 }
-.me__pictures__image.yaboi2:before {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
+.me__container__content__pictures__container__image.yaboi2:before {
   background: url(../../media/yaboi.jpg) 0 0 no-repeat;
-  background-size: cover;
-  transition: 0.4s;
-  transform: rotate(45deg);
 }
-.me__pictures__image.yaboi3:before {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
+.me__container__content__pictures__container__image.yaboi3:before {
   background: url(../../media/mosterd.JPG) 0 0 no-repeat;
-  background-size: cover;
-  transition: 0.4s;
-  transform: rotate(45deg);
 }
-.me__pictures__image:hover {
+.me__container__content__pictures__container__image:hover {
   transform: scale(1.05);
   z-index: 10;
   cursor: pointer;
 }
-.me__pictures__image:active {
+.me__container__content__pictures__container__image:active {
   transform: scale(0.91);
 }
 
 @media (max-width: 1441px) and (min-width: 801px) {
-  .me__container__slides-info {
+  .me__container__content-info {
     width: 55%;
   }
-  .me__container__slides-info__title {
+  .me__container__content-info__title {
     font-size: 3rem;
   }
-  .me__container__slides-info > p {
+  .me__container__content-info > p {
     font-size: 1rem;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .me-main {
-    width: 100%;
+    width: 100vw;
     margin-top: 260px;
-  }
-  .me-main:after {
-    padding-bottom: 0;
   }
   .me__header {
     margin-top: 120px;
-  }
-  .me__container {
-    width: unset;
-    bottom: 0;
-  }
-  .me__pictures {
-    top: -20%;
-    bottom: unset;
-    right: -20%;
   }
 }
 .experience-main {

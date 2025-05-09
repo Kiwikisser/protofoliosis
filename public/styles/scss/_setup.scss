@@ -34,3 +34,10 @@ body {
         color: variables.$primary_colour;
       }
 }
+
+@media (max-width: variables.$phone_width) {
+  .page-header__title {
+    font-size: 20vh;
+    margin: 0 5% 40vh 5%;
+  }
+}

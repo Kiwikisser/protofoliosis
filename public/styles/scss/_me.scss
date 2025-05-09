@@ -1,6 +1,18 @@
 @use 'variables';
+@use 'pulse';
 
 .me {
+    &-picture{
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        top: -25%;
+        left: -25%;
+        background-size: cover !important;
+        transition: .4s;
+        transform: rotate(-45deg);
+    }
 
     &-preload-image-1{
         display:none;
@@ -20,136 +32,100 @@
     &-main {
         width: 60%;
         margin: 3% auto 0 auto;
-        transform: rotate(-45deg);
         position: relative;
         z-index: 5;
-
-        &:after {
-            content: "";
-            display: block;
-            padding-bottom: 20%;
-        }
     }
 
     &__container {
         width: 80%;
-        background-color: white;
-        box-shadow: inset 0px 0px 1px 20px black;
 
-        &:after {
-            content: "";
-            display: block;
-            padding-bottom: 100%;
-        }
-
-        &__slides {
+        &__content {
+            background-color: white;
+            box-shadow: inset 0px 0px 1px 20px black;
             transform: rotate(45deg);
-            position: absolute;
-            top: -5%;
-            left: -5%;
-            width: 90%;
-            height: 90%;
+            position: relative;
+
+            @extend .make-square;
 
             &-info {
-                margin-top: 10%;
-                margin-left: 18%;
+                position: absolute;
+                transform: rotate(-45deg);
                 width: 50%;
+                margin: 2% 23%;
 
                 &__title {
-                    font-size: 5rem;
-                    max-width: 60%;
+                    font-size: 5vw;
                     text-align: center;
-                    margin-left: 37%;
-                    margin-bottom: 10%;
+                    margin: 0 auto 10% auto;
                     color: variables.$primary_colour;
                 }
 
                 & p {
-                    font-size: 1.2rem;
+                    font-size: 1.2vw;
                     margin-bottom: 20px;
+                }
+            }
+
+            &__pictures {
+                position: absolute;
+                width: 40%;
+                right: 0;
+
+                &__container{
+                    position: relative;
+
+                    @extend .make-square;
+        
+                    &__image {
+                        width: 100%;
+                        height: 100%;
+                        top: -50%;
+                        right: -50%;
+                        display: block;
+                        position: absolute;
+                        overflow: hidden;
+                        transition: .4s;
+
+                        @extend .pulse;
+            
+                        &.yaboi1:before {
+                            @extend .me-picture;
+                            background: url(../../media/sittin.jpg) 0 0 no-repeat;
+                        }
+            
+                        &.yaboi2:before {
+                            @extend .me-picture;
+                            background: url(../../media/yaboi.jpg) 0 0 no-repeat;
+                        }
+            
+                        &.yaboi3:before {
+                            @extend .me-picture;
+                            background: url(../../media/mosterd.JPG) 0 0 no-repeat;
+                        }
+            
+                        &:hover {
+                            transform: scale(1.05);
+                            z-index: 10;
+                            cursor: pointer;
+                        }
+            
+                        &:active {
+                            transform: scale(0.91);
+                        }
+                    }
                 }
             }
         }
     }
 
-    &__pictures {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 40%;
-
-        &:after {
-            content: "";
-            display: block;
-            padding-bottom: 100%;
-        }
-
-        &__image {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            overflow: hidden;
-            transition: .4s;
-            box-shadow: 0px 0px 8px 1px #292929;
-
-            &.yaboi1:before {
-                content: "";
-                position: absolute;
-                width: 150%;
-                height: 150%;
-                top: -25%;
-                left: -25%;
-                background: url(../../media/sittin.jpg) 0 0 no-repeat;
-                background-size: cover;
-                transition: .4s;
-                transform: rotate(45deg);
-            }
-
-            &.yaboi2:before {
-                content: "";
-                position: absolute;
-                width: 150%;
-                height: 150%;
-                top: -25%;
-                left: -25%;
-                background: url(../../media/yaboi.jpg) 0 0 no-repeat;
-                background-size: cover;
-                transition: .4s;
-                transform: rotate(45deg);
-            }
-
-            &.yaboi3:before {
-                content: "";
-                position: absolute;
-                width: 150%;
-                height: 150%;
-                top: -25%;
-                left: -25%;
-                background: url(../../media/mosterd.JPG) 0 0 no-repeat;
-                background-size: cover;
-                transition: .4s;
-                transform: rotate(45deg);
-            }
-
-            &:hover {
-                transform: scale(1.05);
-                z-index: 10;
-                cursor: pointer;
-            }
-
-            &:active {
-                transform: scale(0.91);
-            }
-        }
-    }
+    
 }
 
 
 
 // landscape smaller than HiDPI
 @media (max-width: 1441px) and (min-width: 801px) {
-    .me__container__slides-info {
+    .me__container__content-info {
         width: 55%;
 
         &__title {
@@ -163,31 +139,16 @@
 }
 
 
-// portrait smaller than pixel 2XL
-@media (max-width: 420px) {
+// phone portrait
+@media (max-width: variables.$phone_width) {
     .me {
         &-main {
-            width: 100%;
+            width: 100vw;
             margin-top: 260px;
-
-            &:after {
-                padding-bottom: 0;
-            }
         }
 
         &__header {
             margin-top: 120px;
-        }
-
-        &__container {
-            width: unset;
-            bottom: 0;
-        }
-
-        &__pictures {
-            top: -20%;
-            bottom: unset;
-            right: -20%;
         }
     }
 }
