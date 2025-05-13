@@ -443,7 +443,8 @@ body {
   position: absolute;
   transform: rotate(-45deg);
   width: 50%;
-  margin: 2% 23%;
+  margin: 8% 21%;
+  text-align: center;
 }
 .me__container__content-info__title {
   font-size: 5vw;
@@ -454,6 +455,7 @@ body {
 .me__container__content-info p {
   font-size: 1.2vw;
   margin-bottom: 20px;
+  line-height: 1.7rem;
 }
 .me__container__content__pictures {
   position: absolute;

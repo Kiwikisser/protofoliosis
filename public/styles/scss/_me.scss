@@ -51,7 +51,8 @@
                 position: absolute;
                 transform: rotate(-45deg);
                 width: 50%;
-                margin: 2% 23%;
+                margin: 8% 21%; // if any content changes, margin must be changed too because of the rotation
+                text-align: center;
 
                 &__title {
                     font-size: 5vw;
@@ -63,6 +64,7 @@
                 & p {
                     font-size: 1.2vw;
                     margin-bottom: 20px;
+                    line-height: 1.7rem;
                 }
             }
 
