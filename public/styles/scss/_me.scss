@@ -36,8 +36,9 @@
         z-index: 5;
     }
 
-    &__container {
+    &__intro {
         width: 80%;
+        margin-bottom: 500px;
 
         &__content {
             background-color: white;
@@ -120,7 +121,57 @@
         }
     }
 
-    
+    &__qualities{
+        width: 100%;
+
+        &__item{
+            width: 100%;
+            height: calc(450px*0.6);
+            margin-bottom: 200px;
+            position: relative;
+
+            &__square{
+
+                width: 60%;
+                background-color: variables.$primary_colour;
+                transform: rotate(45deg);
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                    
+                @extend .make-square;
+
+                &-container{
+                    width: 450px;
+                    position: absolute;
+                }
+
+                &__image{
+                    rotate: -45deg;
+                    position: absolute;
+                    color: variables.$base_colour;
+                    font-size: 10vw;
+                }
+            }
+
+            &__text{
+                position: absolute;
+                right: 0;
+                width: 60%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 1.6vw;
+
+                &__title{
+                    font-size: 3vw;
+                    margin-bottom: 20px;
+                }
+            }
+
+        }
+    }
 }
 
 

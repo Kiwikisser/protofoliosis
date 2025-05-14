@@ -4,7 +4,7 @@
   clear: both;
 }
 
-.make-square:after, .me__container__content:after, .me__container__content__pictures__container:after {
+.make-square:after, .me__intro__content:after, .me__intro__content__pictures__container:after, .me__qualities__item__square:after {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -18,7 +18,7 @@
   box-shadow: 0px 0px 3px 1px #000000;
 }
 
-.pulse, .me__container__content__pictures__container__image {
+.pulse, .me__intro__content__pictures__container__image {
   display: block;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
   animation: pulse 2s infinite;
@@ -401,7 +401,7 @@ body {
   opacity: 1;
 }
 
-.me-picture, .me__container__content__pictures__container__image.yaboi3:before, .me__container__content__pictures__container__image.yaboi2:before, .me__container__content__pictures__container__image.yaboi1:before {
+.me-picture, .me__intro__content__pictures__container__image.yaboi3:before, .me__intro__content__pictures__container__image.yaboi2:before, .me__intro__content__pictures__container__image.yaboi1:before {
   content: "";
   position: absolute;
   width: 150%;
@@ -430,42 +430,43 @@ body {
   position: relative;
   z-index: 5;
 }
-.me__container {
+.me__intro {
   width: 80%;
+  margin-bottom: 500px;
 }
-.me__container__content {
+.me__intro__content {
   background-color: white;
   box-shadow: inset 0px 0px 1px 20px black;
   transform: rotate(45deg);
   position: relative;
 }
-.me__container__content-info {
+.me__intro__content-info {
   position: absolute;
   transform: rotate(-45deg);
   width: 50%;
   margin: 8% 21%;
   text-align: center;
 }
-.me__container__content-info__title {
+.me__intro__content-info__title {
   font-size: 5vw;
   text-align: center;
   margin: 0 auto 10% auto;
   color: black;
 }
-.me__container__content-info p {
+.me__intro__content-info p {
   font-size: 1.2vw;
   margin-bottom: 20px;
   line-height: 1.7rem;
 }
-.me__container__content__pictures {
+.me__intro__content__pictures {
   position: absolute;
   width: 40%;
   right: 0;
 }
-.me__container__content__pictures__container {
+.me__intro__content__pictures__container {
   position: relative;
 }
-.me__container__content__pictures__container__image {
+.me__intro__content__pictures__container__image {
   width: 100%;
   height: 100%;
   top: -50%;
@@ -475,22 +476,63 @@ body {
   overflow: hidden;
   transition: 0.4s;
 }
-.me__container__content__pictures__container__image.yaboi1:before {
+.me__intro__content__pictures__container__image.yaboi1:before {
   background: url(../../media/sittin.jpg) 0 0 no-repeat;
 }
-.me__container__content__pictures__container__image.yaboi2:before {
+.me__intro__content__pictures__container__image.yaboi2:before {
   background: url(../../media/yaboi.jpg) 0 0 no-repeat;
 }
-.me__container__content__pictures__container__image.yaboi3:before {
+.me__intro__content__pictures__container__image.yaboi3:before {
   background: url(../../media/mosterd.JPG) 0 0 no-repeat;
 }
-.me__container__content__pictures__container__image:hover {
+.me__intro__content__pictures__container__image:hover {
   transform: scale(1.05);
   z-index: 10;
   cursor: pointer;
 }
-.me__container__content__pictures__container__image:active {
+.me__intro__content__pictures__container__image:active {
   transform: scale(0.91);
+}
+.me__qualities {
+  width: 100%;
+}
+.me__qualities__item {
+  width: 100%;
+  height: 270px;
+  margin-bottom: 200px;
+  position: relative;
+}
+.me__qualities__item__square {
+  width: 60%;
+  background-color: black;
+  transform: rotate(45deg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.me__qualities__item__square-container {
+  width: 450px;
+  position: absolute;
+}
+.me__qualities__item__square__image {
+  rotate: -45deg;
+  position: absolute;
+  color: #f3f3f3;
+  font-size: 10vw;
+}
+.me__qualities__item__text {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6vw;
+}
+.me__qualities__item__text__title {
+  font-size: 3vw;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1441px) and (min-width: 801px) {
