@@ -48,13 +48,12 @@ function pictureInteraction(){
 function qualitiesInteraction(){
     const qualityItemSquares = document.getElementsByClassName('me__qualities__item__square');
     const qualityItemText = document.getElementsByClassName('me__qualities__item__text');
-    let activeBool = false;
 
     for (let i = 0; i < qualityItemSquares.length; i++) {
         qualityItemSquares[i].addEventListener("click", function() {
             qualityItemText[i].classList.toggle('active');
 
-            if(!activeBool){
+            if(qualityItemText[i].classList.contains('active')){
                 setTimeout( () => {
                     qualityItemText[i].style.opacity = "100";
                 }, 300);
