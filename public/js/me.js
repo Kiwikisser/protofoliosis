@@ -15,31 +15,16 @@ function pictureInteraction(){
 
     let pictureIndex = 1;
     let myClassesArray = ['yaboi1', 'yaboi2', 'yaboi3']
+    let classToRemoveNextTime;
+    let previousClass;
 
     changeMyPicture = () => {
-        switch (pictureIndex) {
-            case 0:
-                myPicture.classList.add(myClassesArray[pictureIndex]);
-                myPicture.classList.remove(myClassesArray[2]);
-                console.log("hey");
-                break;
-            case 1:
-                myPicture.classList.add(myClassesArray[pictureIndex]);
-                myPicture.classList.remove(myClassesArray[0]);
-                console.log("hi");
-                break;
-            case 2:
-                myPicture.classList.add(myClassesArray[pictureIndex]);
-                myPicture.classList.remove(myClassesArray[1]);
-                console.log("hello");
-                break;
-            default:
+        myPicture.classList.add(myClassesArray[pictureIndex % 3]);
+        classToRemoveNextTime = myClassesArray[pictureIndex % 3];
+        myPicture.classList.remove(previousClass);
+        previousClass = classToRemoveNextTime;
 
-        }
         pictureIndex++;
-        if (pictureIndex > 2) {
-            pictureIndex = 0;
-        }
     }
 
     myPicture.addEventListener("click", changeMyPicture);
