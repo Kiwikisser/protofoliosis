@@ -130,6 +130,37 @@
             margin-bottom: 200px;
             position: relative;
 
+            &:nth-child(odd){
+                & .me__qualities__item__square-container{
+                    left: 0;
+                    flex-direction: row;
+                }
+                & .me__qualities__item__text{
+                    left: 0;
+                    transform: translateX(-25%);
+
+                    &.active{
+                        left: 100%; 
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+
+            &:nth-child(even){
+                & .me__qualities__item__square-container{
+                    right: 0;
+                    flex-direction: row-reverse;
+                }
+                & .me__qualities__item__text{
+                    left: 100%;
+                    transform: translateX(0);
+
+                    &.active{
+                        left: 0;
+                    }
+                }
+            }
+
             &__square{
 
                 width: 60%;
@@ -146,6 +177,7 @@
                 &-container{
                     width: 450px;
                     position: absolute;
+                    display: flex;
                 }
 
                 &__image{
@@ -158,11 +190,15 @@
 
             &__text{
                 position: absolute;
-                right: 0;
                 width: 60%;
-                margin: 0 auto;
                 text-align: center;
                 font-size: 1.6vw;
+                opacity: 0;
+                transition: left 0.4s ease-in-out, 
+                    right 0.4s ease-in-out, 
+                    opacity 0.1s ease-in-out,
+                    transform 0.4s ease-in-out;
+                pointer-events: none;
 
                 &__title{
                     font-size: 3vw;

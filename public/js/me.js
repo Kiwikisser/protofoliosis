@@ -6,6 +6,11 @@
 logInfo("loaded me.js file");
 
 if (true) { // this causes unused variables to be highlighted
+    pictureInteraction();
+    qualitiesInteraction();
+}
+
+function pictureInteraction(){
     const myPicture = document.getElementById('js--my-picture');
 
     let pictureIndex = 1;
@@ -38,4 +43,25 @@ if (true) { // this causes unused variables to be highlighted
     }
 
     myPicture.addEventListener("click", changeMyPicture);
+}
+
+function qualitiesInteraction(){
+    const qualityItemSquares = document.getElementsByClassName('me__qualities__item__square');
+    const qualityItemText = document.getElementsByClassName('me__qualities__item__text');
+    let activeBool = false;
+
+    for (let i = 0; i < qualityItemSquares.length; i++) {
+        qualityItemSquares[i].addEventListener("click", function() {
+            qualityItemText[i].classList.toggle('active');
+
+            if(!activeBool){
+                setTimeout( () => {
+                    qualityItemText[i].style.opacity = "100";
+                }, 300);
+            } else {
+                qualityItemText[i].style.opacity = "0";
+            }
+            activeBool = !activeBool;
+        });
+    }
 }
