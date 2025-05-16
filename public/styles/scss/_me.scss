@@ -161,18 +161,31 @@
                 }
             }
 
-            &__square{
+            &:nth-child(odd) .me__qualities__item__square{
+                &.active{
+                    rotate: 405deg;
+                }
+            }
 
+            &:nth-child(even) .me__qualities__item__square{
+                &.active{
+                    rotate: -315deg;
+                }
+            }
+
+            &__square{
                 width: 60%;
                 background-color: variables.$primary_colour;
-                transform: rotate(45deg);
+                rotate: 45deg;
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                transition: rotate .4s ease-in-out;
                     
                 @extend .make-square;
+                @extend .default-boxshadow;
 
                 &-container{
                     width: 450px;
@@ -184,7 +197,7 @@
                     rotate: -45deg;
                     position: absolute;
                     color: variables.$base_colour;
-                    font-size: 10vw;
+                    font-size: 12rem;
                 }
             }
 

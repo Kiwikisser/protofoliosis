@@ -37,6 +37,7 @@ function qualitiesInteraction(){
     for (let i = 0; i < qualityItemSquares.length; i++) {
         qualityItemSquares[i].addEventListener("click", function() {
             qualityItemText[i].classList.toggle('active');
+            qualityItemSquares[i].classList.toggle('active');
 
             if(qualityItemText[i].classList.contains('active')){
                 setTimeout( () => {
@@ -45,7 +46,6 @@ function qualitiesInteraction(){
             } else {
                 qualityItemText[i].style.opacity = "0";
             }
-            activeBool = !activeBool;
         });
     }
 }
