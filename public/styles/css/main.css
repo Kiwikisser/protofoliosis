@@ -4,7 +4,7 @@
   clear: both;
 }
 
-.make-square:after, .me__intro__content:after, .me__intro__content__pictures__container:after, .me__qualities__item__square:after {
+.make-square:after, .me__intro__content:after, .me__intro__content__pictures__container:after, .me__qualities__item__square:after, .work__intro__container__square:after {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -278,6 +278,30 @@ body {
 
 .work-main {
   padding-top: 20vh;
+}
+.work__intro {
+  position: absolute;
+  top: 70vh;
+  left: 15vw;
+  width: 100%;
+  height: 20vh;
+}
+.work__intro__container {
+  width: 15%;
+}
+.work__intro__container__square {
+  rotate: 45deg;
+  box-shadow: inset 0px 0px 1px 10px black;
+  position: relative;
+}
+.work__intro__container__square__content {
+  position: absolute;
+  rotate: -45deg;
+  padding: 30% 10%;
+}
+.work__intro__container__square__content__text {
+  font-size: 1.5vw;
+  text-align: center;
 }
 .work__pair {
   background-color: black;
