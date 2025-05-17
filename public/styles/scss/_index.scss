@@ -1,0 +1,108 @@
+@use 'variables';
+
+.welcome {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    -webkit-user-drag: none;
+
+    &__zoom {
+        transition: all 0.4s cubic-bezier(1, -0.02, 0.63, 0.99) !important;
+        transform: rotate(315deg) translate(-50%, -50%) !important;
+        width: 220vh !important;
+        height: 220vh !important;
+
+        & article{
+            opacity: 0%;
+        }
+    }
+
+    &__background {
+        height: 110%;
+        width: 110%;
+        top: -2%;
+        left: -7%;
+        object-fit: cover;
+        object-position: 50% 70%;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        position: absolute;
+        filter: blur(7px);
+        -webkit-filter: blur(7px);
+    }
+
+    // Use sass to make parent and child identical in size and position.
+    // supposed-parent, supposed-child
+    &__pane,
+    &__reception {
+        transform-origin: top left;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        width: 30vh;
+        height: 30vh;
+        transition: transform 0.2s ease-out;
+    }
+
+    &__pane {
+        background-color: aliceblue;
+        transform: rotate(45deg) translate(-50%, -50%);
+        box-shadow: 0px 0px 8px 1px #292929;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(135deg) translate(-50%, -50%);
+            box-shadow: inset 0px 0px 1px 10px black;
+        }
+
+        // Border element exists to have an inset border that 
+        // overlaps the starting pixels of the pane.
+        &__border-element {
+            width: 101%;
+            height: 101%;
+            top: -.5%;
+            left: -.5%;
+            position: absolute;
+
+            &:hover {
+                box-shadow: inset 0px 0px 1px 10px black;
+            }
+        }
+    }
+
+    &__reception {
+        transform: translate(-50%, -50%);
+        text-align: center;
+        pointer-events: none;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            & h1,
+            & p {
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+            }
+
+            & h1 {
+                margin-bottom: variables.$default_y_gap;
+                font-size: max(4vw, 4vh);
+            }
+
+            & p {
+                margin-bottom: variables.$default_y_gap;
+                font-size: max(1vw, 1vh);
+            }
+        }
+    }
+}

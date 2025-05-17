@@ -1,0 +1,17 @@
+@use 'variables';
+@use 'pulse';
+@use 'setup';
+@use 'nav-menu';
+@use 'burger-menu';
+@use 'index';
+@use 'work';
+@use 'me';
+@use 'experience';
+
+@media (max-width: variables.$hidpi_width ) and (min-width: variables.$tablet_width) {
+
+}
+
+@media (max-width: variables.$phone_width ){
+   
+}
