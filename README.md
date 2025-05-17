@@ -13,6 +13,7 @@ Using only HTML, JavaScript and my beloved SCSS, I challenge myself to complex e
 - [ ] Responsive for mobile
 - [ ] Dedicated information pages for each project
 - [ ] More projects worth mentioning
+- [ ] CI/CD pipeline for deploying to firebase on merge with main branch
 
 ## Changelog
 
