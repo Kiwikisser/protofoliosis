@@ -42,7 +42,7 @@ function qualitiesInteraction(){
             if(qualityItemText[i].classList.contains('active')){
                 setTimeout( () => {
                     qualityItemText[i].style.opacity = "100";
-                }, 300);
+                }, 200);
             } else {
                 qualityItemText[i].style.opacity = "0";
             }
