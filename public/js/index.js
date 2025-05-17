@@ -11,8 +11,6 @@ if (true) { // this causes unused variables to be highlighted
     const welcomeBackground = document.getElementById('js--welcome-background');
     let followUpPage = "work.html"
 
-    console.log(welcomeBackground.style.objectPosition);
-
     testFunction = (e) => {
         console.log(e);
     }
@@ -26,19 +24,25 @@ if (true) { // this causes unused variables to be highlighted
 
     logInfo("windowWidth: " + windowWidth / 2);
     logInfo("windowHeight: " + windowHeight / 2);
+    logInfo("bg pos: " + welcomeBackground.style.objectPosition);
 
     detectMouse = (e) => {
         let offsetX = windowWidth / 2;
         let offsetY = windowHeight / 2;
 
-        let modifier = 0.05;
+        let modifierPane = 0.05;
         let modifierText = 0.07;
+        let modifierBackgroundY = 600;
+        let modifierBackgroundX = 800;
 
-        welcomePane.style.left = offsetX + (e.x - offsetX) * modifier + "px";
-        welcomePane.style.top = offsetY + (e.y - offsetY) * modifier + "px";
+        welcomePane.style.left = offsetX + (e.x - offsetX) * modifierPane + "px";
+        welcomePane.style.top = offsetY + (e.y - offsetY) * modifierPane + "px";
 
         welcomeReception.style.left = offsetX + (e.x - offsetX) * modifierText + "px";
         welcomeReception.style.top = offsetY + (e.y - offsetY) * modifierText + "px";
+
+        welcomeBackground.style.top = (-e.y / modifierBackgroundY - 1) + "%";
+        welcomeBackground.style.left = (-e.x / modifierBackgroundX - 5) + "%";
     }
 
     welcomePane.addEventListener("click", gottaWorkFromHome);

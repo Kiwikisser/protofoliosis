@@ -2,8 +2,8 @@
 
 .welcome {
     position: relative;
-    height: 100vw;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     -webkit-user-drag: none;
 
@@ -21,8 +21,8 @@
     &__background {
         height: 110%;
         width: 110%;
-        top: -5%;
-        left: -5%;
+        top: -2%;
+        left: -7%;
         object-fit: cover;
         object-position: 50% 70%;
         user-select: none;
@@ -31,8 +31,8 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         position: absolute;
-        filter: blur(6px);
-        -webkit-filter: blur(6px);
+        filter: blur(7px);
+        -webkit-filter: blur(7px);
     }
 
     // Use sass to make parent and child identical in size and position.
