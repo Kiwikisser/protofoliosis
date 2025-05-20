@@ -1,0 +1,133 @@
+@use "variables";
+
+.project{
+    &-body{
+        width: 100vw;
+    }
+
+    &-main{
+        width: 1300px;
+        margin: 0 auto 20vh auto;
+    }
+
+    &-technologies{
+        margin: 0 auto 50vh auto;
+    }
+
+    &__info{
+        width: 100%;
+        margin: 0 auto 50vh auto;
+
+        &__item{
+            width: 100%;
+            height: calc(450px*0.6);
+            margin-bottom: 25%;
+            position: relative;
+
+            &:nth-child(odd){
+                & .project__info__item__square-container{
+                    left: 50%;
+                    translate: -50% 0;
+                    transition: left 0.4s ease-in-out;
+
+                    &.active{
+                        left: 15%;
+                    }
+                }
+                & .project__info__item__text{
+                    left: 0;
+                    transform: translateX(-25%);
+
+                    &.active{
+                        left: 100%; 
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+
+            &:nth-child(even){
+                & .project__info__item__square-container{
+                    right: 50%;
+                    translate: 50% 0;
+                    transition: right 0.4s ease-in-out;
+
+                    &.active{
+                        right: 15%;
+                    }
+                }
+                & .project__info__item__text{
+                    left: 100%;
+                    transform: translateX(0);
+
+                    &.active{
+                        left: 0;
+                    }
+                }
+            }
+
+            &:nth-child(odd) .project__info__item__square{
+                &.active{
+                    rotate: 405deg;
+                }
+            }
+
+            &:nth-child(even) .project__info__item__square{
+                &.active{
+                    rotate: -315deg;
+                }
+            }
+
+            &__square{
+                width: 60%;
+                background-color: variables.$primary_colour;
+                rotate: 45deg;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: rotate .4s ease-in-out;
+                overflow: hidden;
+                    
+                @extend .make-square;
+                @extend .default-boxshadow;
+
+                &-container{
+                    width: 40%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                &__image{
+                    rotate: -45deg;
+                    position: absolute;
+                    height: 142%;
+                    width: 142%;
+                    background-image: url(../../media/workImages/placeholder.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            &__text{
+                position: absolute;
+                width: 60%;
+                text-align: center;
+                font-size: 1.6vw;
+                opacity: 0;
+                transition: left 0.4s ease-in-out, 
+                    right 0.4s ease-in-out, 
+                    opacity 0.1s ease-in-out,
+                    transform 0.4s ease-in-out;
+                pointer-events: none;
+
+                &__title{
+                    font-size: 3vw;
+                    margin-bottom: 20px;
+                }
+            }
+
+        }
+    }
+}

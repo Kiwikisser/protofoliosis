@@ -83,6 +83,10 @@ function loadPageScripts(){
         case "experience":
             loadScript('./js/experience.js');
             break;
+        case "project":
+            loadScript('./js/experience.js');
+            loadScript('./js/project.js');
+            break;
         default:
             logInfo("no page found");
     }
