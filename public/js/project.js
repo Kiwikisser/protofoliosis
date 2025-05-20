@@ -35,11 +35,11 @@ function informationInteraction(){
 }
 
 function projectPortal(){
-    const projectContent = document.getElementById('js--project-content');
-    const projectPortal = document.getElementById('js--project-portal');
-    const projectPortalImage = document.getElementById('js--project-portal-image');
+    const productContent = document.getElementById('js--product-content');
+    const productPortal = document.getElementById('js--product-portal');
+    const productPortalImage = document.getElementById('js--product-portal-image');
 
-    projectContent.addEventListener("click", function() {
+    productContent.addEventListener("click", function() {
         /**
          * .1s 
             content rotate 0deg
@@ -53,5 +53,9 @@ function projectPortal(){
             .2s+
             Opacity thumbnail 100%
         */
+
+            productContent.classList.toggle('active');
+            productPortal.classList.toggle('active');
+            productPortalImage.classList.toggle('active');
     });
 }

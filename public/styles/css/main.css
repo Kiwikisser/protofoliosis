@@ -823,6 +823,10 @@ body {
   display: flex;
   justify-content: center;
 }
+.project__product__content.active {
+  rotate: 0deg;
+  width: 600px;
+}
 .project__product__content-door.arrow {
   position: absolute;
   width: 0;
@@ -844,6 +848,9 @@ body {
   z-index: -1;
   background-color: black;
 }
+.project__product__content__portal.active {
+  width: 50%;
+}
 .project__product__content__portal__thumbnail {
   width: 100%;
   height: 100%;
@@ -851,6 +858,10 @@ body {
   opacity: 0;
   background-image: url(../../media/workImages/placeholder.png);
   background-size: cover;
+  background-position: center;
+}
+.project__product__content__portal__thumbnail.active {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
