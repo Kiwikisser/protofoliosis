@@ -53,7 +53,5 @@ function projectPortal(){
             .2s+
             Opacity thumbnail 100%
         */
-    }
-    
-    
+    });
 }
