@@ -1,4 +1,5 @@
 @use "variables";
+@use "pulse";
 
 .project{
     &-body{
@@ -155,6 +156,9 @@
             display: flex;
             justify-content: center;
             transition: rotate 0.2s ease-in-out, width 0.2s ease-in-out;
+            cursor: pointer;
+
+            @extend .pulse;
 
             &.active{
                 rotate: 0deg;
