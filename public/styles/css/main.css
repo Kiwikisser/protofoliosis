@@ -822,6 +822,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+  transition: rotate 0.2s ease-in-out, width 0.2s ease-in-out;
 }
 .project__product__content.active {
   rotate: 0deg;
@@ -847,6 +848,7 @@ body {
   height: 100%;
   z-index: -1;
   background-color: black;
+  transition: width 0.2s ease-in-out;
 }
 .project__product__content__portal.active {
   width: 50%;
@@ -859,6 +861,7 @@ body {
   background-image: url(../../media/workImages/placeholder.png);
   background-size: cover;
   background-position: center;
+  transition: opacity 0.2s ease-in-out;
 }
 .project__product__content__portal__thumbnail.active {
   opacity: 1;

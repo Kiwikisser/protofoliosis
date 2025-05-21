@@ -40,22 +40,8 @@ function projectPortal(){
     const productPortalImage = document.getElementById('js--product-portal-image');
 
     productContent.addEventListener("click", function() {
-        /**
-         * .1s 
-            content rotate 0deg
-
-            .1s-.2s 
-            left arrow more left
-            right arrow more right
-            (just increase content width to twice the size?)
-            Portal widens too 1.5 times
-
-            .2s+
-            Opacity thumbnail 100%
-        */
-
-            productContent.classList.toggle('active');
-            productPortal.classList.toggle('active');
-            productPortalImage.classList.toggle('active');
+        productContent.classList.toggle('active');
+        productPortal.classList.toggle('active');
+        productPortalImage.classList.toggle('active');
     });
 }

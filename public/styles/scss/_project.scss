@@ -154,6 +154,7 @@
             position: relative;
             display: flex;
             justify-content: center;
+            transition: rotate 0.2s ease-in-out, width 0.2s ease-in-out;
 
             &.active{
                 rotate: 0deg;
@@ -186,6 +187,7 @@
                 height: 100%;
                 z-index: -1;
                 background-color: variables.$primary_colour;
+                transition: width 0.2s ease-in-out;
 
                 &.active{
                     width: 50%;
@@ -199,6 +201,7 @@
                     background-image: url(../../media/workImages/placeholder.png);
                     background-size: cover;
                     background-position: center;
+                    transition: opacity 0.2s ease-in-out;
 
                     &.active{
                         opacity: 1;
