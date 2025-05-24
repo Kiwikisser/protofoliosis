@@ -2,7 +2,7 @@
 
 .experience {
     &-main {
-        width: 1300px;
+        width: min(1300px, 100vw);
         margin: 0 auto 20vh auto;
     }
     
