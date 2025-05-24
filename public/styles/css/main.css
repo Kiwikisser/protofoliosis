@@ -67,7 +67,7 @@ body {
 
 @media (max-width: 430px) {
   .page-header__title {
-    font-size: 20vh;
+    font-size: 6vh;
     margin: 0 5% 40vh 5%;
   }
 }
@@ -615,7 +615,7 @@ body {
   }
 }
 .experience-main {
-  width: 1300px;
+  width: min(1300px, 100vw);
   margin: 0 auto 20vh auto;
 }
 .experience-header .page-header__title {
@@ -708,7 +708,7 @@ body {
   width: 100vw;
 }
 .project-main {
-  width: 1300px;
+  width: min(1300px, 100vw);
   margin: 0 auto 20vh auto;
 }
 .project-technologies {
