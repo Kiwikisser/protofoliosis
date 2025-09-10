@@ -238,3 +238,17 @@
         }
     }
 }
+
+@media (max-width: variables.$phone_width){
+    .project{
+        &__info{
+            &__item{
+                &__square{
+                    &-container{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

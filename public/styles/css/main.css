@@ -822,4 +822,10 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 430px) {
+  .project__info__item__square-container {
+    width: 80%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
