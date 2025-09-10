@@ -19,16 +19,24 @@
 
     &__row{
         display: flex;
-        margin-bottom: 35px;
+        margin-bottom: 0%;
+
+        & .empty{
+            width: 15%;
+            margin: 0.1%;
+
+            @extend .make-square;
+        }
 
         &__item{
-            width: 150px;
-            height: 150px;
+            width: 15%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 111px;
+            margin: 0 7.24%;
             position: relative;
+
+            @extend .make-square;
 
             &__square{
                 width: 75%;
@@ -45,10 +53,11 @@
 
                 &.open{
                     background-color: variables.$base_colour;
-                    width: 150%;
-                    height: 150%;
-                    border: 8px solid variables.$primary_colour;
+                    width: 135%;
+                    height: 135%;
+                    border: variables.$square_border solid variables.$primary_colour;
                     position: absolute;
+                    text-align: center;
 
                     @extend .small-boxshadow;
 
@@ -96,8 +105,9 @@
 
                     &-toggle {
                         color: variables.$base_colour;
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         user-select: none;
+                        text-align: center;
                     }
                 }
             }
@@ -112,4 +122,32 @@
         }
     }
 
+}
+
+@media (max-width: variables.$phone_width) {
+    .experience {
+        &__row{
+            &__item{
+                &__square{
+                    &__content{
+                        &-toggle{
+                            font-size: 0.8em;
+                            text-align: center;
+                        }
+                    }
+
+                    &.open{
+                        border-width: variables.$square_border_mobile;
+
+                        & h3{
+                            font-size: 1.2em;
+                        }
+                    }
+                    &:hover{
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
 }

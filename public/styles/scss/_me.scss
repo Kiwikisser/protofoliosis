@@ -43,7 +43,7 @@
 
         &__content {
             background-color: white;
-            box-shadow: inset 0px 0px 1px 20px black;
+            border: variables.$square_border*4 solid variables.$primary_colour;
             transform: rotate(45deg);
             position: relative;
 
@@ -66,7 +66,6 @@
                 }
 
                 & p {
-                    font-size: 1.2vw;
                     margin-bottom: 20px;
                     line-height: 1.5em;
                 }
@@ -128,7 +127,7 @@
 
 
 // landscape smaller than HiDPI
-@media (max-width: 1441px) and (min-width: 801px) {
+@media (max-width: 1441px) and (min-width: variables.$phone_width) {
     .me__container__content-info {
         width: 55%;
 
@@ -153,6 +152,25 @@
 
         &__header {
             margin-top: 120px;
+        }
+
+        &__intro{
+            width: 100%;
+
+            &__content{
+                border-width: variables.$square_border;
+
+                &__pictures{
+                    left: 0;
+
+                    &__container{
+                        &__image{
+                            right: 0;
+                            left: -50%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

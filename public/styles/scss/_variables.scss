@@ -11,6 +11,9 @@ $fourth_colour: #3E6F8E; //not used
 $default_y_gap: 20px;
 $default_x_gap: 30px;
 
+$square_border: 8px;
+$square_border_mobile: 4px;
+
 .clearfix {
     &:after {
         content: "";

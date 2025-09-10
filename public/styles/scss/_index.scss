@@ -96,12 +96,28 @@
 
             & h1 {
                 margin-bottom: variables.$default_y_gap;
-                font-size: max(4vw, 4vh);
+                font-size: max(4vw, 8vh);
             }
 
             & p {
                 margin-bottom: variables.$default_y_gap;
-                font-size: max(1vw, 1vh);
+                font-size: max(1vw, 2vh);
+            }
+        }
+    }
+}
+
+@media(max-width: variables.$phone_width){
+    .welcome{
+        &__reception{
+            &__content{
+                & h1{
+                    font-size: 60px;
+                }
+
+                & p{
+                    font-size: 21px;
+                }
             }
         }
     }
