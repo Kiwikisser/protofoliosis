@@ -189,6 +189,8 @@
     .work {
         &__intro{
             &__container{
+                width: 40%;
+                
                 &__square{
                     border-width: variables.$square_border_mobile;
                 }
