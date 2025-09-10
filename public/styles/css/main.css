@@ -489,7 +489,6 @@ body {
   color: black;
 }
 .me__intro__content__info p {
-  font-size: 1.2vw;
   margin-bottom: 20px;
   line-height: 1.5em;
 }
@@ -847,6 +846,9 @@ body {
   .project__info__item__square-container {
     width: 80%;
   }
+}
+body {
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,10 @@
 @use 'experience';
 @use 'project';
 
+body{
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem); // min, preferred, max
+}
+
 @media (max-width: variables.$hidpi_width ) and (min-width: variables.$tablet_width) {
 
 }
