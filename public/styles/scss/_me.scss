@@ -68,7 +68,7 @@
                 & p {
                     font-size: 1.2vw;
                     margin-bottom: 20px;
-                    line-height: 1.7rem;
+                    line-height: 1.5em;
                 }
             }
 
@@ -121,107 +121,6 @@
                     }
                 }
             }
-        }
-    }
-
-    &__qualities{
-        width: 100%;
-
-        &__item{
-            width: 100%;
-            height: calc(450px*0.6);
-            margin-bottom: 25%;
-            position: relative;
-
-            &:nth-child(odd){
-                & .me__qualities__item__square-container{
-                    left: 0;
-                    flex-direction: row;
-                }
-                & .me__qualities__item__text{
-                    left: 0;
-                    transform: translateX(-25%);
-
-                    &.active{
-                        left: 100%; 
-                        transform: translateX(-100%);
-                    }
-                }
-            }
-
-            &:nth-child(even){
-                & .me__qualities__item__square-container{
-                    right: 0;
-                    flex-direction: row-reverse;
-                }
-                & .me__qualities__item__text{
-                    left: 100%;
-                    transform: translateX(0);
-
-                    &.active{
-                        left: 0;
-                    }
-                }
-            }
-
-            &:nth-child(odd) .me__qualities__item__square{
-                &.active{
-                    rotate: 405deg;
-                }
-            }
-
-            &:nth-child(even) .me__qualities__item__square{
-                &.active{
-                    rotate: -315deg;
-                }
-            }
-
-            &__square{
-                width: 60%;
-                background-color: variables.$primary_colour;
-                rotate: 45deg;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                transition: rotate .4s ease-in-out;
-                    
-                @extend .make-square;
-                @extend .default-boxshadow;
-
-                &-container{
-                    width: 40%;
-                    position: absolute;
-                    display: flex;
-                }
-
-                &__image{
-                    rotate: -45deg;
-                    position: absolute;
-                    color: variables.$base_colour;
-                    font-size: 12rem;
-                }
-            }
-
-            &__text{
-                position: absolute;
-                width: 60%;
-                text-align: center;
-                font-size: 1.6vw;
-                opacity: 0;
-                transition: left 0.4s ease-in-out, 
-                    right 0.4s ease-in-out, 
-                    opacity 0.1s ease-in-out,
-                    transform 0.4s ease-in-out;
-                pointer-events: none;
-
-                &__title{
-                    font-size: 3vw;
-                    margin-bottom: 20px;
-                }
-            }
-
         }
     }
 }
