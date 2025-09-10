@@ -318,7 +318,7 @@ body {
   rotate: -45deg;
   padding: 30% 10%;
 }
-.work__intro__container__square__content__text {
+.work__intro__container__square__content__text h3 {
   font-size: 1.5vw;
   text-align: center;
 }
@@ -450,6 +450,9 @@ body {
   }
   .work__intro__container__square {
     border-width: 4px;
+  }
+  .work__intro__container__square__content__text h3 {
+    font-size: 1em;
   }
 }
 .me-picture, .me__intro__content__pictures__container__image.yaboi3:before, .me__intro__content__pictures__container__image.yaboi2:before, .me__intro__content__pictures__container__image.yaboi1:before {

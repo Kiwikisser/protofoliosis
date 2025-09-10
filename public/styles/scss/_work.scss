@@ -27,7 +27,7 @@
                     rotate: -45deg;
                     padding: 30% 10%;
 
-                    &__text{
+                    &__text h3{
                         font-size: 1.5vw;
                         text-align: center;
                     }
@@ -193,6 +193,12 @@
                 
                 &__square{
                     border-width: variables.$square_border_mobile;
+
+                    &__content{
+                        &__text h3{
+                            font-size: 1em;
+                        }
+                    }
                 }
             }
         }
