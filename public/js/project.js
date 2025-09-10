@@ -11,6 +11,8 @@ if (true) { // this causes unused variables to be highlighted
 }
 
 function informationInteraction(){
+    const landscape = windowWidth > windowHeight;
+
     const qualityItemContainers = document.getElementsByClassName('project__info__item__square-container');
     const qualityItemSquares = document.getElementsByClassName('project__info__item__square');
     const qualityItemImages = document.getElementsByClassName('project__info__item__square__image');
@@ -18,12 +20,19 @@ function informationInteraction(){
 
     for (let i = 0; i < qualityItemSquares.length; i++) {
         qualityItemSquares[i].addEventListener("click", function() {
-            qualityItemText[i].classList.toggle('active');
+            if (landscape){
+                qualityItemText[i].classList.toggle('active');
+                qualityItemContainers[i].classList.toggle('active');
+            } else {
+                qualityItemText[i].classList.toggle('active-vertical');
+                qualityItemContainers[i].classList.toggle('active-vertical');
+            }
+
             qualityItemSquares[i].classList.toggle('active');
-            qualityItemContainers[i].classList.toggle('active');
             qualityItemImages[i].classList.toggle('active');
 
-            if(qualityItemText[i].classList.contains('active')){
+            if(qualityItemText[i].classList.contains('active') ||
+               qualityItemText[i].classList.contains('active-vertical')){
                 setTimeout( () => {
                     qualityItemText[i].style.opacity = "100";
                 }, 200);

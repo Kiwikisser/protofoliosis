@@ -656,11 +656,15 @@ body {
 }
 .project__info__item:nth-child(odd) .project__info__item__square-container {
   left: 50%;
+  top: 0;
   translate: -50% 0;
-  transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out, top 0.4s ease-in-out;
 }
 .project__info__item:nth-child(odd) .project__info__item__square-container.active {
   left: 15%;
+}
+.project__info__item:nth-child(odd) .project__info__item__square-container.active-vertical {
+  top: -35%;
 }
 .project__info__item:nth-child(odd) .project__info__item__text {
   left: 0;
@@ -670,13 +674,21 @@ body {
   left: 100%;
   transform: translateX(-100%);
 }
+.project__info__item:nth-child(odd) .project__info__item__text.active-vertical {
+  left: 80%;
+  transform: translateX(-100%) translateY(140%);
+}
 .project__info__item:nth-child(even) .project__info__item__square-container {
   right: 50%;
+  top: 0;
   translate: 50% 0;
-  transition: right 0.4s ease-in-out;
+  transition: right 0.4s ease-in-out, top 0.4s ease-in-out;
 }
 .project__info__item:nth-child(even) .project__info__item__square-container.active {
   right: 15%;
+}
+.project__info__item:nth-child(even) .project__info__item__square-container.active-vertical {
+  top: -35%;
 }
 .project__info__item:nth-child(even) .project__info__item__text {
   left: 100%;
@@ -684,6 +696,10 @@ body {
 }
 .project__info__item:nth-child(even) .project__info__item__text.active {
   left: 0;
+}
+.project__info__item:nth-child(even) .project__info__item__text.active-vertical {
+  left: 80%;
+  transform: translateX(-100%) translateY(140%);
 }
 .project__info__item:nth-child(odd) .project__info__item__square.active {
   rotate: 360deg;
