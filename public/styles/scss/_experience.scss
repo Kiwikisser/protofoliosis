@@ -104,8 +104,9 @@
 
                     &-toggle {
                         color: variables.$base_colour;
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         user-select: none;
+                        text-align: center;
                     }
                 }
             }
@@ -127,6 +128,13 @@
         &__row{
             &__item{
                 &__square{
+                    &__content{
+                        &-toggle{
+                            font-size: 0.8em;
+                            text-align: center;
+                        }
+                    }
+
                     &.open{
                         border-width: variables.$square_border_mobile;
                     }
