@@ -180,12 +180,23 @@ body {
 .bar-container__bar--1.change, .bar-container__bar--2.change, .bar-container__bar--3.change {
   background-color: black;
 }
+
 @media (max-width: 430px) {
   .bar-container {
     margin-left: -52px;
+    margin-top: 4px;
+    width: 30px;
+    padding: 2px 3px;
+  }
+  .bar-container__bar, .bar-container__bar--1, .bar-container__bar--2, .bar-container__bar--3 {
+    width: 100%;
+    height: 2px;
+    margin: 6px 0;
   }
   .bar-container__background {
     margin-left: 23px;
+    height: 40px;
+    width: 40px;
   }
 }
 .welcome {
