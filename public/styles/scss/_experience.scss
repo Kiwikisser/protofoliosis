@@ -19,16 +19,24 @@
 
     &__row{
         display: flex;
-        margin-bottom: 35px;
+        margin-bottom: 0%;
+
+        & .empty{
+            width: 15%;
+            margin: 0.1%;
+
+            @extend .make-square;
+        }
 
         &__item{
-            width: 150px;
-            height: 150px;
+            width: 15%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 111px;
+            margin: 0 7.2%;
             position: relative;
+
+            @extend .make-square;
 
             &__square{
                 width: 75%;
@@ -45,8 +53,8 @@
 
                 &.open{
                     background-color: variables.$base_colour;
-                    width: 150%;
-                    height: 150%;
+                    width: 135%;
+                    height: 135%;
                     border: 8px solid variables.$primary_colour;
                     position: absolute;
 
