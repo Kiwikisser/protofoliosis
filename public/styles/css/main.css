@@ -691,6 +691,9 @@ body {
 }
 
 @media (max-width: 430px) {
+  .experience-main {
+    overflow-x: clip;
+  }
   .experience__row__item__square__content-toggle {
     font-size: 0.8em;
     text-align: center;
