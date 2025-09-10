@@ -873,6 +873,23 @@ body {
   .project__info__item__square-container {
     width: 80%;
   }
+  .project__product__content {
+    height: 140px;
+    width: 140px;
+  }
+  .project__product__content-door.left, .project__product__content-door.right {
+    border-top-width: 70px;
+    border-bottom-width: 70px;
+  }
+  .project__product__content-door.left {
+    border-right-width: 70px;
+  }
+  .project__product__content-door.right {
+    border-left-width: 70px;
+  }
+  .project__product__content__portal.active {
+    width: 65%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

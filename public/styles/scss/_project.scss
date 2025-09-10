@@ -250,5 +250,33 @@
                 }
             }
         }
+
+        &__product{
+            &__content{
+                height: 140px;
+                width: 140px;
+
+                &-door{
+                    &.left, &.right{
+                        border-top-width: 70px;
+                        border-bottom-width: 70px;
+                    }
+
+                    &.left{
+                        border-right-width: 70px;
+                    }
+
+                    &.right{
+                        border-left-width: 70px;
+                    }
+                }
+
+                &__portal{
+                    &.active{
+                        width: 65%;
+                    }
+                }
+            }
+        }
     }
 }
