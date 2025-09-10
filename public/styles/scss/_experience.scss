@@ -33,7 +33,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 7.2%;
+            margin: 0 7.24%;
             position: relative;
 
             @extend .make-square;
@@ -120,4 +120,21 @@
         }
     }
 
+}
+
+@media (max-width: variables.$phone_width) {
+    .experience {
+        &__row{
+            &__item{
+                &__square{
+                    &.open{
+                        border-width: 4px;
+                    }
+                    &:hover{
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
 }
