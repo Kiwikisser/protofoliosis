@@ -8,7 +8,9 @@
 
     &-main{
         width: min(1300px, 100vw);
-        margin: 0 auto 20vh auto;
+        margin: 0 auto 0 auto;
+        padding-bottom: 20vh;
+        overflow: hidden;
     }
 
     &-technologies{
@@ -37,7 +39,7 @@
                         left: 15%;
                     }
 
-                    &.active-vertical{
+                    &.active-vertical{ // portrait orientation viewport
                         top: -35%;
                     }
                 }
@@ -50,9 +52,9 @@
                         transform: translateX(-100%);
                     }
 
-                    &.active-vertical{
+                    &.active-vertical{ // portrait orientation viewport
                         left: 80%; 
-                        transform: translateX(-100%) translateY(140%);
+                        transform: translateX(-100%) translateY(66%);
                     }
                 }
             }
@@ -69,7 +71,7 @@
                         right: 15%;
                     }
 
-                    &.active-vertical{
+                    &.active-vertical{ // portrait orientation viewport
                         top: -35%;
                     }
                 }
@@ -81,9 +83,9 @@
                         left: 0;
                     }
 
-                    &.active-vertical{
+                    &.active-vertical{ // portrait orientation viewport
                         left: 80%; 
-                        transform: translateX(-100%) translateY(140%);
+                        transform: translateX(-100%) translateY(66%);
                     }
                 }
             }
@@ -144,7 +146,6 @@
                 position: absolute;
                 width: 60%;
                 text-align: center;
-                font-size: 1.6vw;
                 opacity: 0;
                 transition: left 0.4s ease-in-out, 
                     right 0.4s ease-in-out, 
@@ -242,7 +243,11 @@
 @media (max-width: variables.$phone_width){
     .project{
         &__info{
+            margin: 0 auto 25vh auto;
+
             &__item{
+                margin-bottom: 50%;
+
                 &__square{
                     &-container{
                         width: 80%;

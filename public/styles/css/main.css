@@ -694,7 +694,9 @@ body {
 }
 .project-main {
   width: min(1300px, 100vw);
-  margin: 0 auto 20vh auto;
+  margin: 0 auto 0 auto;
+  padding-bottom: 20vh;
+  overflow: hidden;
 }
 .project-technologies {
   margin: 0 auto 50vh auto;
@@ -731,7 +733,7 @@ body {
 }
 .project__info__item:nth-child(odd) .project__info__item__text.active-vertical {
   left: 80%;
-  transform: translateX(-100%) translateY(140%);
+  transform: translateX(-100%) translateY(66%);
 }
 .project__info__item:nth-child(even) .project__info__item__square-container {
   right: 50%;
@@ -754,7 +756,7 @@ body {
 }
 .project__info__item:nth-child(even) .project__info__item__text.active-vertical {
   left: 80%;
-  transform: translateX(-100%) translateY(140%);
+  transform: translateX(-100%) translateY(66%);
 }
 .project__info__item:nth-child(odd) .project__info__item__square.active {
   rotate: 360deg;
@@ -799,7 +801,6 @@ body {
   position: absolute;
   width: 60%;
   text-align: center;
-  font-size: 1.6vw;
   opacity: 0;
   transition: left 0.4s ease-in-out, right 0.4s ease-in-out, opacity 0.1s ease-in-out, transform 0.4s ease-in-out;
   pointer-events: none;
@@ -870,6 +871,12 @@ body {
 }
 
 @media (max-width: 430px) {
+  .project__info {
+    margin: 0 auto 25vh auto;
+  }
+  .project__info__item {
+    margin-bottom: 50%;
+  }
   .project__info__item__square-container {
     width: 80%;
   }
