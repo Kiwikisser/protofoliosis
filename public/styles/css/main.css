@@ -324,7 +324,7 @@ body {
 .work__intro__container__square__content {
   position: absolute;
   rotate: -45deg;
-  padding: 30% 10%;
+  padding: 22% 10%;
 }
 .work__intro__container__square__content__text h3 {
   font-size: 1.5vw;
@@ -458,6 +458,9 @@ body {
   }
   .work__intro__container__square {
     border-width: 4px;
+  }
+  .work__intro__container__square__content {
+    padding: 25% 10%;
   }
   .work__intro__container__square__content__text h3 {
     font-size: 1em;
