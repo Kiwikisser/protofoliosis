@@ -148,6 +148,7 @@
         &-main {
             width: 100vw;
             margin-top: 260px;
+            overflow-x: clip;
         }
 
         &__header {
