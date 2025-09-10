@@ -57,6 +57,7 @@
                     height: 135%;
                     border: variables.$square_border solid variables.$primary_colour;
                     position: absolute;
+                    text-align: center;
 
                     @extend .small-boxshadow;
 
@@ -137,6 +138,10 @@
 
                     &.open{
                         border-width: variables.$square_border_mobile;
+
+                        & h3{
+                            font-size: 1.2em;
+                        }
                     }
                     &:hover{
                         transform: rotate(45deg);

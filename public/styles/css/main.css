@@ -639,6 +639,7 @@ body {
   height: 135%;
   border: 8px solid black;
   position: absolute;
+  text-align: center;
 }
 .experience__row__item__square.open img {
   opacity: 50%;
@@ -695,6 +696,9 @@ body {
   }
   .experience__row__item__square.open {
     border-width: 4px;
+  }
+  .experience__row__item__square.open h3 {
+    font-size: 1.2em;
   }
   .experience__row__item__square:hover {
     transform: rotate(45deg);
