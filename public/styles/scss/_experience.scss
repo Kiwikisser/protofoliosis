@@ -55,7 +55,7 @@
                     background-color: variables.$base_colour;
                     width: 135%;
                     height: 135%;
-                    border: 8px solid variables.$primary_colour;
+                    border: variables.$square_border solid variables.$primary_colour;
                     position: absolute;
 
                     @extend .small-boxshadow;
@@ -128,7 +128,7 @@
             &__item{
                 &__square{
                     &.open{
-                        border-width: 4px;
+                        border-width: variables.$square_border_mobile;
                     }
                     &:hover{
                         transform: rotate(45deg);

@@ -291,7 +291,7 @@ body {
 }
 .work__intro__container__square {
   rotate: 45deg;
-  box-shadow: inset 0px 0px 1px 10px black;
+  border: 8px solid black;
   position: relative;
 }
 .work__intro__container__square__content {
@@ -425,6 +425,11 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 430px) {
+  .work__intro__container__square {
+    border-width: 4px;
+  }
+}
 .me-picture, .me__intro__content__pictures__container__image.yaboi3:before, .me__intro__content__pictures__container__image.yaboi2:before, .me__intro__content__pictures__container__image.yaboi1:before {
   content: "";
   position: absolute;
