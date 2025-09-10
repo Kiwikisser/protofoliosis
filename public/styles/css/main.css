@@ -51,7 +51,7 @@ html {
 body {
   background-color: #f3f3f3;
   overflow-x: hidden;
-  font-size: 62.5%;
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
   min-height: 100vh;
 }
 
@@ -846,9 +846,6 @@ body {
   .project__info__item__square-container {
     width: 80%;
   }
-}
-body {
-  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
 }
 
 /*# sourceMappingURL=main.css.map */

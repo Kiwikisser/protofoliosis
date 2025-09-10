@@ -1,43 +1,43 @@
 @use 'variables';
 
 * {
-  margin: 0;
-  padding: 0;
-  // font-family: 'Exo', sans-serif;
-  // font-family: 'Montserrat', sans-serif;
-  // font-family: 'Ubuntu', sans-serif;
-  // font-family: 'Dosis', sans-serif;
-  // font-family: 'Orbitron', sans-serif; //looks nice for heads
-  // font-family: 'Comfortaa', cursive;
-  // font-family: 'Ropa Sans', sans-serif;
-  font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    // font-family: 'Exo', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Dosis', sans-serif;
+    // font-family: 'Orbitron', sans-serif; //looks nice for heads
+    // font-family: 'Comfortaa', cursive;
+    // font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: variables.$base_colour;
-  overflow-x: hidden;
-  font-size: 62.5%;
-  min-height: 100vh;
+    background-color: variables.$base_colour;
+    overflow-x: hidden;
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem); // min, preferred, max
+    min-height: 100vh;
 }
 
-.page-header{
+.page-header {
     margin-top: 30vh;
 
-    &__title{
+    &__title {
         font-size: 8vw;
         margin: 0 8% 40vh 8%;
         font-family: 'Orbitron', sans-serif;
         color: variables.$primary_colour;
-      }
+    }
 }
 
 @media (max-width: variables.$phone_width) {
-  .page-header__title {
-    font-size: 6vh;
-    margin: 0 5% 40vh 5%;
-  }
+    .page-header__title {
+        font-size: 6vh;
+        margin: 0 5% 40vh 5%;
+    }
 }
