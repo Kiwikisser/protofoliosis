@@ -12,13 +12,9 @@ Using only HTML, JavaScript and my beloved SCSS, I challenge myself to complex e
 
 ### [Issues](https://github.com/Kiwikisser/protofoliosis/issues)
 
-### Version 1.2
+### [Milestone: Version 1.2](https://github.com/Kiwikisser/protofoliosis/milestone/2)
 
-- [ ] Dedicated information pages for each project #19
-
-### Version 1.3
-
-- [ ] More projects worth mentioning #10
+### [Milestone: Version 1.3](https://github.com/Kiwikisser/protofoliosis/milestone/3)
 
 ## Changelog
 
