@@ -1,6 +1,18 @@
 @use "variables";
 @use "pulse";
 
+/**************************************
+    Project page thumbnail classes
+*/
+
+.ipmedt2-portal{
+    background-image:  url(../../media/workThumbnails/ipmedt2.png) !important;
+}
+
+/**************************************
+    Regular styling classes
+*/
+
 .project{
     &-body{
         width: 100vw;
