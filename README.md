@@ -10,12 +10,25 @@ Using only HTML, JavaScript and my beloved SCSS, I challenge myself to complex e
 
 ## Planned changes
 
-- [ ] Responsive for mobile
-- [ ] Dedicated information pages for each project
-- [ ] More projects worth mentioning
-- [ ] CI/CD pipeline for deploying to firebase on merge with main branch
+### [Issues](https://github.com/Kiwikisser/protofoliosis/issues)
+
+### Version 1.2
+
+- [ ] Dedicated information pages for each project #19
+
+### Version 1.3
+
+- [ ] More projects worth mentioning #10
 
 ## Changelog
+
+### 10.09.2025 - Version 1.1
+
+The big responsiveness chore
+
+Realised:
+
+- [x] Responsive for mobile
 
 ### 18.05.2025 - Version 1.0
 
