@@ -14,7 +14,7 @@ if (true) { // this causes unused variables to be highlighted
     const workIROBClickbait = document.getElementsByClassName('cb4')[0];
 
     const workIpmedt2Thumb = document.getElementById('js--ipmedt2');
-    const suiniflow = 'https://suiniflow.firebaseapp.com/';
+    const suiniflow = './interactive-storytelling.html';
 
     const workIipmedtThumb = document.getElementById('js--iipmedt');
     const museumArcade = 'https://kiwikisser.github.io';

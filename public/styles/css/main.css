@@ -708,6 +708,16 @@ body {
     transform: rotate(45deg);
   }
 }
+/**************************************
+    Project page thumbnail classes
+*/
+.ipmedt2-portal {
+  background-image: url(../../media/workThumbnails/ipmedt2.png) !important;
+}
+
+/**************************************
+    Regular styling classes
+*/
 .project-body {
   width: 100vw;
 }
@@ -715,6 +725,7 @@ body {
   width: min(1300px, 100vw);
   margin: 0 auto 0 auto;
   padding-bottom: 20vh;
+  padding-top: 9%;
   overflow: hidden;
 }
 .project-technologies {
@@ -740,19 +751,10 @@ body {
   left: 15%;
 }
 .project__info__item:nth-child(odd) .project__info__item__square-container.active-vertical {
-  top: -35%;
+  top: -50%;
 }
 .project__info__item:nth-child(odd) .project__info__item__text {
-  left: 0;
-  transform: translateX(-25%);
-}
-.project__info__item:nth-child(odd) .project__info__item__text.active {
-  left: 100%;
-  transform: translateX(-100%);
-}
-.project__info__item:nth-child(odd) .project__info__item__text.active-vertical {
-  left: 80%;
-  transform: translateX(-100%) translateY(66%);
+  padding-left: 30%;
 }
 .project__info__item:nth-child(even) .project__info__item__square-container {
   right: 50%;
@@ -764,18 +766,10 @@ body {
   right: 15%;
 }
 .project__info__item:nth-child(even) .project__info__item__square-container.active-vertical {
-  top: -35%;
+  top: -50%;
 }
 .project__info__item:nth-child(even) .project__info__item__text {
-  left: 100%;
-  transform: translateX(0);
-}
-.project__info__item:nth-child(even) .project__info__item__text.active {
-  left: 0;
-}
-.project__info__item:nth-child(even) .project__info__item__text.active-vertical {
-  left: 80%;
-  transform: translateX(-100%) translateY(66%);
+  padding-right: 30%;
 }
 .project__info__item:nth-child(odd) .project__info__item__square.active {
   rotate: 360deg;
@@ -817,12 +811,12 @@ body {
   width: 101%;
 }
 .project__info__item__text {
-  position: absolute;
-  width: 60%;
   text-align: center;
   opacity: 0;
-  transition: left 0.4s ease-in-out, right 0.4s ease-in-out, opacity 0.1s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.1s ease-in-out, transform 0.4s ease-in-out;
   pointer-events: none;
+  margin: 0 auto;
+  width: 70%;
 }
 .project__info__item__text__title {
   font-size: 3vw;
@@ -894,10 +888,18 @@ body {
     margin: 0 auto 25vh auto;
   }
   .project__info__item {
-    margin-bottom: 50%;
+    margin-bottom: 110%;
   }
   .project__info__item__square-container {
-    width: 80%;
+    width: 125%;
+  }
+  .project__info__item__text {
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+    padding-top: 50%;
+  }
+  .project__info__item__text h4 {
+    font-size: 2em;
   }
   .project__product__content {
     height: 140px;
@@ -914,7 +916,7 @@ body {
     border-left-width: 70px;
   }
   .project__product__content__portal.active {
-    width: 65%;
+    width: 64%;
   }
 }
 
