@@ -56,18 +56,7 @@
                     }
                 }
                 & .project__info__item__text{
-                    left: 0;
-                    transform: translateX(-25%);
-
-                    &.active{
-                        left: 100%; 
-                        transform: translateX(-100%);
-                    }
-
-                    &.active-vertical{ // portrait orientation viewport
-                        left: 80%; 
-                        transform: translateX(-100%) translateY(66%);
-                    }
+                    padding-left: 30%;
                 }
             }
 
@@ -88,17 +77,7 @@
                     }
                 }
                 & .project__info__item__text{
-                    left: 100%;
-                    transform: translateX(0);
-
-                    &.active{
-                        left: 0;
-                    }
-
-                    &.active-vertical{ // portrait orientation viewport
-                        left: 80%; 
-                        transform: translateX(-100%) translateY(66%);
-                    }
+                    padding-right: 30%;
                 }
             }
 
@@ -155,15 +134,14 @@
             }
 
             &__text{
-                position: absolute;
-                width: 60%;
                 text-align: center;
                 opacity: 0;
-                transition: left 0.4s ease-in-out, 
-                    right 0.4s ease-in-out, 
+                transition: 
                     opacity 0.1s ease-in-out,
                     transform 0.4s ease-in-out;
                 pointer-events: none;
+                margin: 0 auto;
+                width: 70%;
 
                 &__title{
                     font-size: 3vw;
@@ -258,12 +236,18 @@
             margin: 0 auto 25vh auto;
 
             &__item{
-                margin-bottom: 50%;
+                margin-bottom: 75%;
 
                 &__square{
                     &-container{
                         width: 80%;
                     }
+                }
+
+                &__text{
+                    padding-right: 0% !important;
+                    padding-left: 0% !important;
+                    padding-top: 32%;
                 }
             }
         }
@@ -290,7 +274,7 @@
 
                 &__portal{
                     &.active{
-                        width: 65%;
+                        width: 64%;
                     }
                 }
             }
