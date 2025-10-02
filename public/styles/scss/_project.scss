@@ -22,6 +22,7 @@
         width: min(1300px, 100vw);
         margin: 0 auto 0 auto;
         padding-bottom: 20vh;
+        padding-top: 9%;
         overflow: hidden;
     }
 
@@ -52,7 +53,7 @@
                     }
 
                     &.active-vertical{ // portrait orientation viewport
-                        top: -35%;
+                        top: -50%;
                     }
                 }
                 & .project__info__item__text{
@@ -73,7 +74,7 @@
                     }
 
                     &.active-vertical{ // portrait orientation viewport
-                        top: -35%;
+                        top: -50%;
                     }
                 }
                 & .project__info__item__text{
@@ -236,18 +237,22 @@
             margin: 0 auto 25vh auto;
 
             &__item{
-                margin-bottom: 75%;
+                margin-bottom: 110%;
 
                 &__square{
                     &-container{
-                        width: 80%;
+                        width: 125%;
                     }
                 }
 
                 &__text{
                     padding-right: 0% !important;
                     padding-left: 0% !important;
-                    padding-top: 32%;
+                    padding-top: 50%;
+
+                    & h4{
+                        font-size: 2em;
+                    }
                 }
             }
         }
