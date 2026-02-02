@@ -9,7 +9,7 @@ if (true) { // this causes unused variables to be highlighted
     const welcomePane = document.getElementById('js--welcome-pane');
     const welcomeReception = document.getElementById('js--welcome-reception');
     const welcomeBackground = document.getElementById('js--welcome-background');
-    let followUpPage = "work.html"
+    let followUpPage = "experience.html"
 
     testFunction = (e) => {
         console.log(e);
